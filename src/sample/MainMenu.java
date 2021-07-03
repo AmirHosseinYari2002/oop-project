@@ -156,15 +156,20 @@ public class MainMenu {
         gameCopml.setProgress((double) player.getLevel()*0.111);
         for (int i = 0; i < player.getLevel(); i++) {
             levelBtn.get(i).setVisible(true);
+
             int finalI = i;
+            int finalI1 = i;
             levelBtn.get(i).addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     GUI.mainSound.stop();
+                    System.out.println(finalI1);
+                    StartLevel.level = new Levels(finalI1 +1);
                     Stage stage = (Stage) level1Btn.getScene().getWindow();
                     stage.close();
                     Parent root = null;
                     try {
+
                         root = FXMLLoader.load(getClass().getResource("startLevel.fxml"));
                     } catch (IOException e) {
                         e.printStackTrace();

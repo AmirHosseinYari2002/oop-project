@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Levels {
     String status;
     int levelNum;
-    File levelFile = new File("src\\missions.txt");
+    File levelFile = new File("src\\sample\\missions.txt");
     TIME time = new TIME(0);
     TIME finishTime;
     int coins;
