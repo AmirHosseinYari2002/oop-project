@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartLevel">
+   <children>
+      <ImageView fitHeight="816.0" fitWidth="1423.0" layoutX="-1.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" scaleX="1.18" scaleY="1.03">
+         <image>
+            <Image url="@../sample/pictures/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="215.0" fitWidth="261.0" layoutX="142.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/Barn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="516.0" fitWidth="901.0" layoutX="290.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/main5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="113.0" layoutX="517.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/Well.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="240.0" fitWidth="270.0" layoutX="782.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/truck.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="161.0" fitWidth="359.0" layoutX="1151.0" layoutY="632.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/loadtitle1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="165.0" fitWidth="106.0" layoutX="125.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/mill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="185.0" fitWidth="215.0" layoutX="72.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/bakery.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1277.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/iceCreamSelling.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="259.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/loadtitle1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="224.0" fitWidth="248.0" layoutX="1243.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/weaving.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="248.0" fitWidth="287.0" layoutX="25.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/sewing.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="215.0" fitWidth="229.0" layoutX="1247.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/milk.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1223.0" layoutY="665.0" prefHeight="86.0" prefWidth="206.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="43.0" prefHeight="43.0" prefWidth="141.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="74.0" fitWidth="98.0" layoutX="320.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/henIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="74.0" layoutX="408.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/catIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="74.0" layoutX="492.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/dogIcon.png" />
+         </image>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="615.0" layoutY="65.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <ImageView fitHeight="67.0" fitWidth="61.0" layoutX="585.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/turkey.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#ff1fcc" layoutX="703.0" layoutY="65.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <ImageView fitHeight="61.0" fitWidth="61.0" layoutX="674.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/buffaloIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

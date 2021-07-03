@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="865.0" prefWidth="1432.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainMenu">
+   <children>
+      <ImageView fitHeight="882.0" fitWidth="1576.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="farmer" fitHeight="293.0" fitWidth="315.0" layoutX="1021.0" layoutY="383.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/farmer3.gif" />
+         </image>
+      </ImageView>
+      <Accordion layoutX="185.0" layoutY="202.0" />
+      <ImageView fitHeight="152.0" fitWidth="399.0" layoutX="699.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5">
+         <image>
+            <Image url="@../sample/pictures/loadtitle1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="745.0" layoutY="49.0" prefHeight="76.0" prefWidth="302.0" text="SUT Farm Frenzy" textFill="#fff200">
+         <font>
+            <Font name="Magneto Bold" size="26.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="playerName" layoutX="703.0" layoutY="107.0" prefHeight="48.0" prefWidth="188.0" text="Player: " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="playerCoins" layoutX="929.0" layoutY="112.0" prefHeight="38.0" prefWidth="182.0" text="Coins: " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="100.0" arcWidth="100.0" height="528.0" layoutX="213.0" layoutY="191.0" opacity="0.84" scaleX="0.85" scaleY="0.85" stroke="BLACK" strokeType="INSIDE" width="393.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07122807204723358" green="0.6631578803062439" blue="0.2981345057487488" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fx:id="Levels" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="235.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+         <image>
+            <Image url="@../sample/pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Help" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="320.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+         <image>
+            <Image url="@../sample/pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="profile" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="414.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+         <image>
+            <Image url="@../sample/pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="signOut" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="505.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+         <image>
+            <Image url="@../sample/pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exit" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="592.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+         <image>
+            <Image url="@../sample/pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="415.0" layoutY="251.0" prefHeight="46.0" prefWidth="88.0" text="Levels">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="415.0" layoutY="609.0" onMouseClicked="#showExit" prefHeight="46.0" prefWidth="88.0" text="Exit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="409.0" layoutY="521.0" onMouseClicked="#showSignOut" prefHeight="48.0" prefWidth="98.0" text="Sign out">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="391.0" layoutY="426.0" onMouseClicked="#showProfile" prefHeight="55.0" prefWidth="135.0" text="Edit Profile">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="415.0" layoutY="337.0" onMouseClicked="#showHelp" prefHeight="46.0" prefWidth="88.0" text="Help">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="exitImg" fitHeight="62.0" fitWidth="65.0" layoutX="292.0" layoutY="607.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+         <image>
+            <Image url="@../sample/pictures/exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="signOutImg" fitHeight="80.0" fitWidth="88.0" layoutX="283.0" layoutY="513.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+         <image>
+            <Image url="@../sample/pictures/SignOut.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="editPrfImg" fitHeight="80.0" fitWidth="80.0" layoutX="283.0" layoutY="418.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+         <image>
+            <Image url="@../sample/pictures/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="helpImg" fitHeight="80.0" fitWidth="80.0" layoutX="283.0" layoutY="329.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+         <image>
+            <Image url="@../sample/pictures/option2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="levelsImg" fitHeight="106.0" fitWidth="80.0" layoutX="283.0" layoutY="238.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+         <image>
+            <Image url="@../sample/pictures/levels.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="76.0" layoutX="234.0" layoutY="690.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="352.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07122807204723358" green="0.6631578803062439" blue="0.2981345057487488" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="date" alignment="CENTER" layoutX="320.0" layoutY="701.0" prefHeight="30.0" prefWidth="238.0" text="Date: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" alignment="CENTER" layoutX="315.0" layoutY="733.0" prefHeight="30.0" prefWidth="261.0" text="Time:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="dataPanel" layoutX="648.0" layoutY="234.0" prefHeight="526.0" prefWidth="770.0" visible="false">
+         <children>
+            <Rectangle fx:id="dataPnlBackG" arcHeight="50.0" arcWidth="50.0" height="540.0" layoutX="-2.0" layoutY="-1.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" width="770.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.07122807204723358" green="0.6631578803062439" blue="0.2981345057487488" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button fx:id="backBtn" layoutX="630.0" layoutY="474.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="98.0" text="Return" />
+            <Label fx:id="dataPanelTitle" layoutX="169.0" layoutY="38.0" prefHeight="48.0" prefWidth="445.0" text="Title">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="helpInfo" editable="false" layoutX="75.0" layoutY="96.0" prefHeight="354.0" prefWidth="634.0" text="If you thought life in the big city was crazy, wait until you get a load of the country life in Farm Frenzy,&#10;a super-fun arcade game that lets you show Old MacDonald how it's done!&#10;Daily chores have never been more entertaining as you cultivate your fields, feed your animals and gather the items they produce.&#10;Better keep the bears away from your ducks, though, or you won't have any eggs to sell at the market!&#10;You can spend the money you earn on upgrading your farm to churn out more products faster than before.&#10;Offering plenty of mouse-clicking action, just enough strategy to keep things interesting and an amusing cast of characters,&#10; SUT Farm Frenzy is a game the whole family can enjoy!&#10;&#10;&#10;   Created and designed by:&#10; Mohammad Hossein Shafizadegan and Amir Hossein Yari &#10;                                                           all rights reserved." visible="false">
+               <font>
+                  <Font name="Calibri" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+            <TextField fx:id="getUsername" layoutX="264.0" layoutY="194.0" prefHeight="43.0" prefWidth="282.0" visible="false">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="getPass" layoutX="264.0" layoutY="321.0" prefHeight="43.0" prefWidth="281.0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="UserLbl" layoutX="316.0" layoutY="141.0" text="Enter your new Username" textFill="#3e05a9" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="passLbl" layoutX="318.0" layoutY="279.0" text="Enter your new Password" textFill="#3e05a9" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="userImg" fitHeight="68.0" fitWidth="56.0" layoutX="252.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../sample/pictures/username.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="passImg" fitHeight="48.0" fitWidth="43.0" layoutX="259.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../sample/pictures/password.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="confirm" layoutX="356.0" layoutY="394.0" mnemonicParsing="false" onAction="#editUserInfo" prefHeight="43.0" prefWidth="98.0" text="Confirm" visible="false" />
+            <Button fx:id="level2Btn" layoutX="348.0" layoutY="169.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 2" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level3Btn" layoutX="484.0" layoutY="169.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 3" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level5Btn" layoutX="348.0" layoutY="238.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 5" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level8Btn" layoutX="348.0" layoutY="312.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 8" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level7Btn" layoutX="210.0" layoutY="312.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 7" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level4Btn" layoutX="210.0" layoutY="238.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 4" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level1Btn" layoutX="210.0" layoutY="169.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 1" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level6Btn" layoutX="484.0" layoutY="238.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 6" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="level9Btn" layoutX="484.0" layoutY="312.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="98.0" text="Level 9" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <ProgressIndicator fx:id="gameCopml" layoutX="189.0" layoutY="454.0" prefHeight="76.0" prefWidth="122.0" progress="0.0" scaleX="2.5" scaleY="2.5" visible="false" />
+            <Label fx:id="gameCmpltLbl" layoutX="244.0" layoutY="443.0" prefHeight="30.0" prefWidth="128.0" text="Game complition" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="245.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/Sharif.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
