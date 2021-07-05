@@ -19,11 +19,6 @@
             <Image url="@../sample/pictures/Barn.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="516.0" fitWidth="901.0" layoutX="290.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../sample/pictures/main5.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="well" fitHeight="142.0" fitWidth="113.0" layoutX="517.0" layoutY="644.0" onMouseClicked="#fillWaterBucket" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/Well.png" />
@@ -206,5 +201,14 @@
             <Image url="@pictures/update.png" />
          </image>
       </ImageView>
+      <AnchorPane fx:id="ground" layoutX="293.0" layoutY="157.0" prefHeight="516.0" prefWidth="870.0">
+         <children>
+            <ImageView fx:id="groundBack" fitHeight="516.0" fitWidth="901.0" layoutX="14.0" layoutY="-20.0" onMouseClicked="#plantGrass" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sample/pictures/main5.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

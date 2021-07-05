@@ -420,18 +420,16 @@ public class Manager {
         }
     }
     public int planting(int x, int y){
-        if (x >= 1  &&  x <= 6  &&  y >= 1  &&  y <= 6){
-            for (Grass grass : grassesList) {
-                if (grass.getX() == x  &&  grass.getY() == y)
-                    return 2;
-            }
-            if (Well.getInstance().getRemainingWater() > 0) {
-                Grass grass = new Grass(x, y);
-                grassesList.add(grass);
-                Well.getInstance().setRemainingWater(Well.getInstance().getRemainingWater()-1);
-                return 3;
-            }else return 4;
-        }else return 1;
+        for (Grass grass : grassesList) {
+            if (grass.getX() == x  &&  grass.getY() == y)
+                return 2;
+        }
+        if (Well.getInstance().getRemainingWater() > 0) {
+            Grass grass = new Grass(x, y);
+            grassesList.add(grass);
+            Well.getInstance().setRemainingWater(Well.getInstance().getRemainingWater()-1);
+            return 3;
+        }else return 4;
     }
     public String startingWorkshop(String name){
         for (WorkShop workShop : workShops) {
