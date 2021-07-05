@@ -165,6 +165,7 @@ public class MainMenu {
                     GUI.mainSound.stop();
                     System.out.println(finalI1);
                     StartLevel.level = new Levels(finalI1 +1);
+                    StartLevel.manager = new Manager(StartLevel.level,player);
                     Stage stage = (Stage) level1Btn.getScene().getWindow();
                     stage.close();
                     Parent root = null;
@@ -238,7 +239,6 @@ public class MainMenu {
     @FXML
     void showSignOut(MouseEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.WARNING,"Sign out",ButtonType.YES,ButtonType.NO);
-        System.out.println(alert.getButtonTypes());
         alert.setTitle("Sign out");
         alert.setHeaderText("");
         alert.setContentText("Are you sure you want to sign out?");

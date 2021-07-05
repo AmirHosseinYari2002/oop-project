@@ -39,17 +39,17 @@
             <Image url="@../sample/pictures/loadtitle1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="millWS" fitHeight="165.0" fitWidth="106.0" layoutX="118.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="millWS" fitHeight="165.0" fitWidth="106.0" layoutX="59.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/mill.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bakeryWS" fitHeight="185.0" fitWidth="215.0" layoutX="72.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bakeryWS" fitHeight="185.0" fitWidth="215.0" layoutX="18.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/bakery.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="iceCreamWS" fitHeight="150.0" fitWidth="200.0" layoutX="1277.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="iceCreamWS" fitHeight="150.0" fitWidth="200.0" layoutX="1301.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/iceCreamSelling.png" />
          </image>
@@ -59,17 +59,17 @@
             <Image url="@../sample/pictures/loadtitle1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sewingWS" fitHeight="224.0" fitWidth="248.0" layoutX="1243.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sewingWS" fitHeight="224.0" fitWidth="248.0" layoutX="1267.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/weaving.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="weavingWS" fitHeight="224.0" fitWidth="248.0" layoutX="57.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="weavingWS" fitHeight="224.0" fitWidth="248.0" layoutX="-2.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/sewing.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="milkWS" fitHeight="215.0" fitWidth="229.0" layoutX="1247.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="milkWS" fitHeight="215.0" fitWidth="229.0" layoutX="1271.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../sample/pictures/milk.png" />
          </image>
@@ -116,5 +116,95 @@
             <Font size="14.0" />
          </font>
       </Label>
+      <ImageView fx:id="weavingBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="204.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="milkBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="1205.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iceCreamBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="1205.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="millBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="214.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sewingBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="1205.0" layoutY="527.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bakeryBuildBtn" fitHeight="98.0" fitWidth="118.0" layoutX="204.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="BuildMillLBL" alignment="CENTER" layoutX="217.0" layoutY="335.0" prefHeight="30.0" prefWidth="74.0" text="Build Mill" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="BuildBakeryLBL" alignment="CENTER" layoutX="208.0" layoutY="503.0" prefHeight="30.0" prefWidth="74.0" text="Build Bakery" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="BuildWeavingLBL" alignment="CENTER" layoutX="203.0" layoutY="196.0" prefHeight="30.0" prefWidth="84.0" text="Build Weaving" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="BuildSewingLBL" alignment="CENTER" layoutX="1209.0" layoutY="527.0" prefHeight="30.0" prefWidth="74.0" text="Build Sewing" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="BuildIceCreamLBL" alignment="CENTER" layoutX="1201.0" layoutY="196.0" prefHeight="30.0" prefWidth="92.0" text="Build iceCream" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="BuildMilkLBL" alignment="CENTER" layoutX="1209.0" layoutY="350.0" prefHeight="30.0" prefWidth="74.0" text="Build Milk" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="upgradeWeaving" fitHeight="40.0" fitWidth="148.0" layoutX="193.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeSewing" fitHeight="40.0" fitWidth="148.0" layoutX="1195.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeMilk" fitHeight="40.0" fitWidth="148.0" layoutX="1195.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeIceCream" fitHeight="40.0" fitWidth="148.0" layoutX="1195.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeMill" fitHeight="40.0" fitWidth="148.0" layoutX="204.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeBakery" fitHeight="40.0" fitWidth="148.0" layoutX="197.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
