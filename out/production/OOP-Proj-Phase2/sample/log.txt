@@ -995,3 +995,12 @@ Sat Jul 03 16:09:09 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 03 16:11:07 IRDT 2021 [ERROR] Sign in failed
 Sat Jul 03 16:11:13 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 03 16:12:14 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 05 10:22:03 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 05 10:22:20 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Mon Jul 05 12:34:20 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 05 12:34:31 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 12:34:32 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 12:34:33 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 12:34:34 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 12:34:35 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 12:34:36 IRDT 2021 [INFO] The product of does not work is ready

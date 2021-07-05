@@ -220,9 +220,9 @@ public class StartLevel {
         final int[] second = {0};
         final int[] minute = {0};
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            update();
             timeLbl.setText("Time: "+ minute[0] + ":" + second[0]);
             second[0] = second[0] +1 ;
-            level.time.n++;
             if (second[0] == 60){
                 second[0] = 0;
                 minute[0]++;
@@ -289,5 +289,10 @@ public class StartLevel {
                 }
             });
         }
+    }
+
+    void update(){
+        coinLbl.setText("Coins: "+MainMenu.player.getCoins());
+        level.time.n++;
     }
 }
