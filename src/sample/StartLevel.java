@@ -142,7 +142,15 @@ public class StartLevel {
 
     @FXML
     void fillWaterBucket(MouseEvent event) {
-
+        String manageError = manager.fillWaterBucket();
+        if (manageError.equals("haveWater")) {
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","The bucket still has water. So you can not take water from the well");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The bucket still has water");
+        }
+        else if (manageError.equals("filled")) {
+            GUI.createAlert(Alert.AlertType.INFORMATION,"Well","The bucket of water was filled");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The bucket of water was filled");
+        }
     }
 
     @FXML
@@ -203,15 +211,11 @@ public class StartLevel {
                 public void handle(MouseEvent mouseEvent) {
                     String result = manager.upgradeWorkshop(WSBtnNames[workshopUpgradeBtn.indexOf(imageView)]);
                     if (result.equals("coins")){
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("Sorry tou don't have enough coins...");
-                        alert.showAndWait();
+                        GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry tou don't have enough coins...");
                     }
                     else {
                         GUI.playSound(new File("src\\sample\\pictures\\upgradeSound.wav")).start();
-                        Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
-                        alert1.setContentText("Great You Upgrade this workshop to level2.");
-                        alert1.showAndWait();
+                        GUI.createAlert(Alert.AlertType.INFORMATION,"Upgrade","Great! You Upgrade this workshop to level2.");
                         imageView.setVisible(false);
                     }
                 }
@@ -255,9 +259,7 @@ public class StartLevel {
                     if (alert.getResult() == ButtonType.YES){
                         String result = manager.buyWorkshop(WSBtnNames[workshopBuildBtn.indexOf(imageView)]);
                         if (result.equals("coins")){
-                            Alert alert1 = new Alert(Alert.AlertType.ERROR);
-                            alert1.setContentText("Sorry you don't have enough coin...");
-                            alert1.showAndWait();
+                            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry you don't have enough coin...");
                         }
                         else {
                             imageView.setVisible(false);
@@ -275,14 +277,10 @@ public class StartLevel {
                 public void handle(MouseEvent mouseEvent) {
                     String result = manager.startingWorkshop(WSBtnNames[workshopBtn.indexOf(imageView)]);
                     if (result.equals("b")){
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("You do not have the raw materials to produce the product !");
-                        alert.showAndWait();
+                        GUI.createAlert(Alert.AlertType.ERROR,"ERROR","You do not have the raw materials to produce the product !");
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"do not have the raw materials to produce the product");
                     }else {
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setContentText(result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
-                        alert.showAndWait();
+                        GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
                         imageView.setDisable(true);
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
                     }

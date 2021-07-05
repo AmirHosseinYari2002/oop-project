@@ -1011,3 +1011,6 @@ Mon Jul 05 12:37:02 IRDT 2021 [INFO] The product of does not work is ready
 Mon Jul 05 12:37:03 IRDT 2021 [INFO] The product of does not work is ready
 Mon Jul 05 12:37:04 IRDT 2021 [INFO] The product of does not work is ready
 Mon Jul 05 12:37:05 IRDT 2021 [INFO] The product of does not work is ready
+Mon Jul 05 17:12:05 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 05 17:12:14 IRDT 2021 [ERROR] The bucket still has water
+Mon Jul 05 17:12:21 IRDT 2021 [ERROR] do not have the raw materials to produce the product

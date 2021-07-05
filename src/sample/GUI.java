@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.EventHandler;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
@@ -84,5 +85,13 @@ public class GUI {
             e.printStackTrace();
         }
         return clip;
+    }
+
+    public static void createAlert(Alert.AlertType type, String title, String text){
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText("");
+        alert.setContentText(text);
+        alert.showAndWait();
     }
 }
