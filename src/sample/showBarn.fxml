@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="460.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShowBarn">
+   <children>
+      <ImageView fitHeight="469.0" fitWidth="860.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/barnWallpaper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="155.0" layoutX="314.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/loadtitle.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="369.0" layoutY="27.0" prefHeight="35.0" prefWidth="56.0" text="Barn">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="737.0" layoutY="413.0" mnemonicParsing="false" onAction="#returnToGame" prefHeight="42.0" prefWidth="97.0" text="Return" />
+      <ListView fx:id="data" layoutX="184.0" layoutY="101.0" opacity="0.9" prefHeight="298.0" prefWidth="482.0">
+         <effect>
+            <DropShadow spread="0.33" />
+         </effect>
+      </ListView>
+   </children>
+</AnchorPane>
