@@ -148,26 +148,12 @@ public class StartLevel {
     private ImageView groundBack;
 
     @FXML
-    void plantGrass(MouseEvent event) {
-        int manageError = manager.planting((int) event.getX() ,(int) event.getY());
-        if (manageError == 2) {
-            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","There is grass in these location !");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"There is grass in these location");
-        }else if (manageError == 3) {
-            try {
-                ImageView img = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\grass.png")));
-                img.setX(event.getX()-groundBack.getX());
-                img.setY(event.getY()-groundBack.getY()-20);
-                img.setFitWidth(50);
-                img.setFitHeight(42);
-                img.setVisible(true);
-                ground.getChildren().addAll(img);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Grass was planted");
-        }else if (manageError == 4){
-            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket does not have a  water!");
+    void plantGrass(MouseEvent event) throws FileNotFoundException {
+        ImageView imageView = manager.planting((int) event.getX() ,(int) event.getY());
+        if (imageView != null){
+            imageView.setX(event.getX()-groundBack.getX());
+            imageView.setY(event.getY()-groundBack.getY()-25);
+            ground.getChildren().addAll(imageView);
         }
     }
 

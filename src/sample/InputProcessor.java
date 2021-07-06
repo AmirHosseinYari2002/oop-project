@@ -50,7 +50,7 @@ public class InputProcessor {
         }
     }
     private void processPlanting(String[] split){
-        int manageError = manager.planting(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
+        int manageError = 0; //manager.planting(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
         if (manageError == 1) {
             System.err.println("Invalid Input");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Wrong location for planting");

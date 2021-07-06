@@ -1,5 +1,9 @@
 package sample;//import com.google.gson.Gson;
 
+import javafx.scene.control.Alert;
+import javafx.scene.image.ImageView;
+
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Manager {
@@ -419,17 +423,17 @@ public class Manager {
             return "filled";
         }
     }
-    public int planting(int x, int y){
-        for (Grass grass : grassesList) {
-            if (grass.getX() == x  &&  grass.getY() == y)
-                return 2;
-        }
+    public ImageView planting(int x, int y) throws FileNotFoundException {
         if (Well.getInstance().getRemainingWater() > 0) {
             Grass grass = new Grass(x, y);
             grassesList.add(grass);
             Well.getInstance().setRemainingWater(Well.getInstance().getRemainingWater()-1);
-            return 3;
-        }else return 4;
+            grass.setImg();
+            return grass.getImg();
+        }else {
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket is empty!...");
+        }
+        return null;
     }
     public String startingWorkshop(String name){
         for (WorkShop workShop : workShops) {
