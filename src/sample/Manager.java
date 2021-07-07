@@ -88,27 +88,33 @@ public class Manager {
             if (grassesList.size() > 0) {
                 if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getX() > domesticAnimal.X) {
                     domesticAnimal.X++;
+                    domesticAnimal.image.setX(domesticAnimal.X);
                 } else if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getX() < domesticAnimal.X) {
                     domesticAnimal.X--;
+                    domesticAnimal.image.setX(domesticAnimal.X);
                 } else {
                     if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getY() > domesticAnimal.Y) {
                         domesticAnimal.Y++;
+                        domesticAnimal.image.setY(domesticAnimal.Y);
                     } else if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getY() < domesticAnimal.Y) {
                         domesticAnimal.Y--;
+                        domesticAnimal.image.setY(domesticAnimal.Y);
                     }
                 }
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (domesticAnimal.X == 6){
+                    if (domesticAnimal.X == 880){
                         a = -a;
                     }
                     domesticAnimal.X += a;
+                    domesticAnimal.image.setX(domesticAnimal.X);
                 }else {
-                    if (domesticAnimal.Y == 6){
+                    if (domesticAnimal.Y == 480){
                         a = -a;
                     }
                     domesticAnimal.Y += a;
+                    domesticAnimal.image.setY(domesticAnimal.Y);
                 }
             }
         }
@@ -116,56 +122,66 @@ public class Manager {
             if (productsList.size() > 0) {
                 if (shortestDistanceToCollectProduct(cat.X, cat.Y).getX() > cat.X) {
                     cat.X++;
+                    cat.image.setX(cat.X);
                 } else if (shortestDistanceToCollectProduct(cat.X, cat.Y).getX() < cat.X) {
                     cat.X--;
+                    cat.image.setX(cat.X);
                 } else {
                     if (shortestDistanceToCollectProduct(cat.X, cat.Y).getY() > cat.Y) {
                         cat.Y++;
+                        cat.image.setY(cat.Y);
                     } else if (shortestDistanceToCollectProduct(cat.X, cat.Y).getY() < cat.Y) {
                         cat.Y--;
+                        cat.image.setY(cat.Y);
                     }
                 }
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (cat.X == 6){
+                    if (cat.X == 880){
                         a = -a;
                     }
                     cat.X += a;
+                    cat.image.setX(cat.X);
                 }else {
-                    if (cat.Y == 6){
+                    if (cat.Y == 480){
                         a = -a;
                     }
                     cat.Y += a;
+                    cat.image.setY(cat.Y);
                 }
             }
         }
         for (Hound hound : houndsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (hound.X == 6){
+                if (hound.X == 880){
                     a = -a;
                 }
                 hound.X += a;
+                hound.image.setX(hound.X);
             }else {
-                if (hound.Y == 6){
+                if (hound.Y == 480){
                     a = -a;
                 }
                 hound.Y += a;
+                hound.image.setY(hound.Y);
             }
         }
         for (WildAnimal wildAnimal : wildAnimalsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (wildAnimal.X == 6){
+                if (wildAnimal.X == 880){
                     a = -a;
                 }
                 wildAnimal.X += a;
+                wildAnimal.image.setX(wildAnimal.X);
             }else {
-                if (wildAnimal.Y == 6){
+                if (wildAnimal.Y == 480){
                     a = -a;
                 }
                 wildAnimal.Y += a;
+                wildAnimal.image.setY(wildAnimal.Y);
             }
         }
     }
