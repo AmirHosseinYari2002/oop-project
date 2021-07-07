@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
@@ -87,7 +88,7 @@ public class InputProcessor {
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Cage level increased");
         }
     }
-    private void processGoingForwardTime(String[] split){
+    private void processGoingForwardTime(String[] split) throws FileNotFoundException {
         for (int i = 0; i < Integer.parseInt(split[1]); i++) {
             updateGame();
             showInformation();
@@ -165,7 +166,7 @@ public class InputProcessor {
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+manageError + " upgraded");
         }
     }
-    private void updateGame(){
+    private void updateGame() throws FileNotFoundException {
         manager.level.time.n++;
         manager.move();
         manager.eatGrass();
@@ -271,7 +272,7 @@ public class InputProcessor {
             } else if (input.matches("^(?i)cage\\s+(\\d\\s+\\d)\\s*$")) {
                 processCage(input.split("\\s+"));
             } else if (input.matches("^(?i)turn\\s+(\\d+)\\s*$")) {
-                processGoingForwardTime(input.split("\\s+"));
+                //processGoingForwardTime(input.split("\\s+"));
             } else if (input.matches("^(?i)(truck\\s+load)\\s+(\\w+)\\s+(\\d+)\\s*$")) {
                 processLoadingProducts(input.split("\\s+"));
             } else if (input.matches("^(?i)(truck\\s+unload)\\s+(\\w+)\\s*$")) {

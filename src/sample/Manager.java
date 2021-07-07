@@ -262,7 +262,7 @@ public class Manager {
             }
         }
     }
-    public Animal buyAnimal(String name){
+    public Animal buyAnimal(String name) throws FileNotFoundException {
         switch (name){
             case "Buffalo" -> {
                 if (player.getCoins() >= 400) {
@@ -713,7 +713,7 @@ public class Manager {
         }
         removeProductList.clear();
     }
-    public void appearWildAnimal(){
+    public void appearWildAnimal() throws FileNotFoundException {
         for (Map.Entry<String,Integer> entry : level.wildAnimals.entrySet()){
             if (entry.getValue() == level.time.n){
                 switch (entry.getKey()){

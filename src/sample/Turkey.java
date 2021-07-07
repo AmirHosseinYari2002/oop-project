@@ -1,7 +1,13 @@
 package sample;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class Turkey extends DomesticAnimal{
-    public Turkey(int x, int y) {
+    public Turkey(int x, int y) throws FileNotFoundException {
         this.price = 200;
         this.ManufacturedProduct = "feather";
         this.remainingLife = 100;
@@ -10,6 +16,9 @@ public class Turkey extends DomesticAnimal{
         this.OccupiedSpace = 2;
         this.X = x;
         this.Y = y;
+        this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\turkey.png")));
+        this.image.setFitHeight(80);
+        this.image.setFitWidth(80);
     }
 
     @Override

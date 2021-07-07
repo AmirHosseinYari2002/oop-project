@@ -1,9 +1,14 @@
 package sample;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Random;
 
 public class Tiger extends WildAnimal{
-    public Tiger(int x, int y) {
+    public Tiger(int x, int y) throws FileNotFoundException {
         this.cageLevel = 0;
         this.price = 500;
         this.X = x;
@@ -13,5 +18,8 @@ public class Tiger extends WildAnimal{
         this.name = "Tiger";
         this.decreaseCageLevel = false;
         this.useCageOrder = false;
+        this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\tiger.png")));
+        this.image.setFitHeight(80);
+        this.image.setFitWidth(80);
     }
 }
