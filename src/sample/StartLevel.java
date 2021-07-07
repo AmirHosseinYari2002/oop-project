@@ -319,4 +319,99 @@ public class StartLevel {
         coinLbl.setText("Coins: "+MainMenu.player.getCoins());
         level.time.n++;
     }
+
+    @FXML
+    void buyBuffalo(MouseEvent event) throws FileNotFoundException {
+        Animal manageError = manager.buyAnimal("Buffalo");
+        if (manageError != null){
+            ImageView buffaloImg = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\buffaloIcon.png")));
+            buffaloImg.setX(manageError.X);
+            buffaloImg.setY(manageError.Y);
+            buffaloImg.setFitWidth(80);
+            buffaloImg.setFitHeight(80);
+            buffaloImg.setVisible(true);
+            ground.getChildren().addAll(buffaloImg);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
+
+        }else if (manageError.equals("Coins")){
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy buffalo");
+        }
+    }
+
+    @FXML
+    void buyCat(MouseEvent event) throws FileNotFoundException {
+        Animal manageError = manager.buyAnimal("Cat");
+        if (manageError != null){
+            ImageView catImg = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cat.png")));
+            catImg.setX(manageError.X);
+            catImg.setY(manageError.Y);
+            catImg.setFitWidth(80);
+            catImg.setFitHeight(80);
+            catImg.setVisible(true);
+            ground.getChildren().addAll(catImg);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy cat");
+
+        }else if (manageError.equals("Coins")){
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy cat");
+        }
+    }
+
+    @FXML
+    void buyHen(MouseEvent event) throws FileNotFoundException {
+        Animal manageError = manager.buyAnimal("Hen");
+        if (manageError != null){
+            ImageView henImg = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\hen.png")));
+            henImg.setX(manageError.X);
+            henImg.setY(manageError.Y);
+            henImg.setFitWidth(80);
+            henImg.setFitHeight(80);
+            henImg.setVisible(true);
+            ground.getChildren().addAll(henImg);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
+
+        }else if (manageError.equals("Coins")){
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hen");
+        }
+    }
+
+    @FXML
+    void buyHound(MouseEvent event) throws FileNotFoundException {
+        Animal manageError = manager.buyAnimal("Hound");
+        if (manageError != null){
+            ImageView houndImg = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\hound.png")));
+            houndImg.setX(manageError.X);
+            houndImg.setY(manageError.Y);
+            houndImg.setFitWidth(80);
+            houndImg.setFitHeight(80);
+            houndImg.setVisible(true);
+            ground.getChildren().addAll(houndImg);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hound");
+
+        }else if (manageError.equals("Coins")){
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hound");
+        }
+    }
+
+    @FXML
+    void buyTurkey(MouseEvent event) throws FileNotFoundException {
+        Animal manageError = manager.buyAnimal("Turkey");
+        if (manageError != null){
+            ImageView turkeyImg = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\turkey1.png")));
+            turkeyImg.setX(manageError.X);
+            turkeyImg.setY(manageError.Y);
+            turkeyImg.setFitWidth(80);
+            turkeyImg.setFitHeight(80);
+            turkeyImg.setVisible(true);
+            ground.getChildren().addAll(turkeyImg);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");
+
+        }else if (manageError.equals("Coins")){
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy turkey");
+        }
+    }
 }
