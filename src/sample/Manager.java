@@ -3,6 +3,7 @@ package sample;//import com.google.gson.Gson;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,6 +12,10 @@ import java.util.*;
 public class Manager {
     Levels level;
     Player player;
+    final static int mapWidth = 880;
+    final static int mapHeight = 480;
+    final static int distanceMapAndPageWidth = 250;
+    final static int distanceMapAndPageHeight = 150;
 
     static Random random = new Random();
     private ArrayList<DomesticAnimal> domesticAnimalsList = new ArrayList<>();
@@ -106,13 +111,13 @@ public class Manager {
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (domesticAnimal.X == 880){
+                    if (domesticAnimal.X == mapWidth){
                         a = -a;
                     }
                     domesticAnimal.X += a;
                     domesticAnimal.image.setX(domesticAnimal.X);
                 }else {
-                    if (domesticAnimal.Y == 480){
+                    if (domesticAnimal.Y == mapHeight){
                         a = -a;
                     }
                     domesticAnimal.Y += a;
@@ -140,13 +145,13 @@ public class Manager {
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (cat.X == 880){
+                    if (cat.X == mapWidth){
                         a = -a;
                     }
                     cat.X += a;
                     cat.image.setX(cat.X);
                 }else {
-                    if (cat.Y == 480){
+                    if (cat.Y == mapHeight){
                         a = -a;
                     }
                     cat.Y += a;
@@ -157,13 +162,13 @@ public class Manager {
         for (Hound hound : houndsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (hound.X == 880){
+                if (hound.X == mapWidth){
                     a = -a;
                 }
                 hound.X += a;
                 hound.image.setX(hound.X);
             }else {
-                if (hound.Y == 480){
+                if (hound.Y == mapHeight){
                     a = -a;
                 }
                 hound.Y += a;
@@ -173,13 +178,13 @@ public class Manager {
         for (WildAnimal wildAnimal : wildAnimalsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (wildAnimal.X == 880){
+                if (wildAnimal.X == mapWidth){
                     a = -a;
                 }
                 wildAnimal.X += a;
                 wildAnimal.image.setX(wildAnimal.X);
             }else {
-                if (wildAnimal.Y == 480){
+                if (wildAnimal.Y == mapHeight){
                     a = -a;
                 }
                 wildAnimal.Y += a;
@@ -205,9 +210,10 @@ public class Manager {
     }
     public void reduceLife(){
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
-            domesticAnimal.remainingLife -= 10;
+            domesticAnimal.remainingLife -= 1;
             if (domesticAnimal.remainingLife <= 0){
                 removeAnimalList.add(domesticAnimal);
+                domesticAnimal.image.setVisible(false);
             }
         }
         for (Animal animal : removeAnimalList) {
@@ -285,7 +291,7 @@ public class Manager {
         switch (name){
             case "Buffalo" -> {
                 if (player.getCoins() >= 400) {
-                    Buffalo buffalo = new Buffalo(random.nextInt(800)+250,random.nextInt(400)+150);
+                    Buffalo buffalo = new Buffalo(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     player.setCoins(player.getCoins()-buffalo.price);
                     domesticAnimalsList.add(buffalo);
                     buffalo.startProduceProduct = new TIME(level.time.n);
@@ -294,7 +300,7 @@ public class Manager {
             }
             case "Cat" -> {
                 if (player.getCoins() >= 150) {
-                    Cat cat = new Cat(random.nextInt(800)+250,random.nextInt(400)+150);
+                    Cat cat = new Cat(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     player.setCoins(player.getCoins()-cat.price);
                     catsList.add(cat);
                     return cat;
@@ -302,7 +308,7 @@ public class Manager {
             }
             case "Hen" -> {
                 if (player.getCoins() >= 100) {
-                    Hen hen = new Hen(random.nextInt(800)+250,random.nextInt(400)+150);
+                    Hen hen = new Hen(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     player.setCoins(player.getCoins()-hen.price);
                     domesticAnimalsList.add(hen);
                     hen.startProduceProduct = new TIME(level.time.n);
@@ -311,7 +317,7 @@ public class Manager {
             }
             case "Hound" -> {
                 if (player.getCoins() >= 100) {
-                    Hound hound = new Hound(random.nextInt(800)+250,random.nextInt(400)+150);
+                    Hound hound = new Hound(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     player.setCoins(player.getCoins()-hound.price);
                     houndsList.add(hound);
                     return hound;
@@ -319,7 +325,7 @@ public class Manager {
             }
             case "Turkey" -> {
                 if (player.getCoins() >= 200) {
-                    Turkey turkey = new Turkey(random.nextInt(800)+250,random.nextInt(400)+150);
+                    Turkey turkey = new Turkey(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     player.setCoins(player.getCoins()-turkey.price);
                     domesticAnimalsList.add(turkey);
                     turkey.startProduceProduct = new TIME(level.time.n);
@@ -329,7 +335,7 @@ public class Manager {
         }
         return null;
     }
-    public String buyWorkshop(String name){
+    public String buyWorkshop(String name) throws FileNotFoundException {
         for (WorkShop workShop : workShops) {
             if (workShop.name.equals(name)){
                 return "have";
@@ -718,13 +724,17 @@ public class Manager {
         }
         return false;
     }
-    public void isAnimalManufacturedProduct(){
+    public void isAnimalManufacturedProduct(AnchorPane ground) throws FileNotFoundException {
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
             if (level.time.n-domesticAnimal.startProduceProduct.n == domesticAnimal.timeRequiredToProduct){
                 Product product = domesticAnimal.outProduct(level.time);
                 domesticAnimal.startProduceProduct = new TIME(level.time.n);
                 product.setStartDisappearTime(new TIME(level.time));
                 productsList.add(product);
+                product.image.setX(product.getX());
+                product.image.setY(product.getY());
+                product.image.setVisible(true);
+                ground.getChildren().addAll(product.image);
             }
         }
     }
@@ -732,6 +742,7 @@ public class Manager {
         for (Product product : productsList) {
             if (TIME.diff(product.getStartDisappearTime(),level.time) == product.getDisappearTime()){
                 removeProductList.add(product);
+                product.image.setVisible(false);
             }
         }
         for (Product product : removeProductList) {
@@ -739,21 +750,33 @@ public class Manager {
         }
         removeProductList.clear();
     }
-    public void appearWildAnimal() throws FileNotFoundException {
+    public void appearWildAnimal(AnchorPane ground) throws FileNotFoundException {
         for (Map.Entry<String,Integer> entry : level.wildAnimals.entrySet()){
             if (entry.getValue() == level.time.n){
                 switch (entry.getKey()){
                     case "Tiger" ->{
-                        Tiger tiger = new Tiger(random.nextInt(6)+1,random.nextInt(6)+1);
+                        Tiger tiger = new Tiger(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                         wildAnimalsList.add(tiger);
+                        tiger.image.setX(tiger.X);
+                        tiger.image.setY(tiger.Y);
+                        tiger.image.setVisible(true);
+                        ground.getChildren().addAll(tiger.image);
                     }
                     case "Lion" ->{
-                        Lion lion = new Lion(random.nextInt(6)+1,random.nextInt(6)+1);
+                        Lion lion = new Lion(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                         wildAnimalsList.add(lion);
+                        lion.image.setX(lion.X);
+                        lion.image.setY(lion.Y);
+                        lion.image.setVisible(true);
+                        ground.getChildren().addAll(lion.image);
                     }
                     case "Bear" ->{
-                        Bear bear = new Bear(random.nextInt(6)+1,random.nextInt(6)+1);
+                        Bear bear = new Bear(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
                         wildAnimalsList.add(bear);
+                        bear.image.setX(bear.X);
+                        bear.image.setY(bear.Y);
+                        bear.image.setVisible(true);
+                        ground.getChildren().addAll(bear.image);
                     }
                 }
             }

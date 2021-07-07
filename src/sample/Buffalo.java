@@ -22,7 +22,7 @@ public class Buffalo extends DomesticAnimal{
     }
 
     @Override
-    Product outProduct(TIME startDisappearTime) {
-        return new Product(this.ManufacturedProduct,25,1,4,startDisappearTime,Manager.random.nextInt(6)+1,Manager.random.nextInt(6)+1);
+    Product outProduct(TIME startDisappearTime) throws FileNotFoundException {
+        return new Product(this.ManufacturedProduct,25,1,4,startDisappearTime,Manager.random.nextInt(Manager.mapWidth)+Manager.distanceMapAndPageWidth,Manager.random.nextInt(Manager.mapHeight)+Manager.distanceMapAndPageHeight);
     }
 }

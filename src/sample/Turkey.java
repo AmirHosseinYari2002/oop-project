@@ -16,13 +16,13 @@ public class Turkey extends DomesticAnimal{
         this.OccupiedSpace = 2;
         this.X = x;
         this.Y = y;
-        this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\turkey.png")));
+        this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\turkey1.png")));
         this.image.setFitHeight(80);
         this.image.setFitWidth(80);
     }
 
     @Override
-    Product outProduct(TIME startDisappearTime) {
-        return new Product(this.ManufacturedProduct,20,1,4,startDisappearTime,Manager.random.nextInt(6)+1,Manager.random.nextInt(6)+1);
+    Product outProduct(TIME startDisappearTime) throws FileNotFoundException {
+        return new Product(this.ManufacturedProduct,20,1,4,startDisappearTime,Manager.random.nextInt(Manager.mapWidth)+Manager.distanceMapAndPageWidth,Manager.random.nextInt(Manager.mapHeight)+Manager.distanceMapAndPageHeight);
     }
 }

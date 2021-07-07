@@ -136,23 +136,23 @@ public class InputProcessor {
         System.out.println(ANSI_CYAN+"The car started transporting products to the city.");
         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The car started transporting");
     }
-    private void processBuildWorkshop(String[] split){
-        String manageError = manager.buyWorkshop(split[1]);
-        if (manageError.equals("have")){
-            System.err.println("You have bought this workshop before...");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"have bought this workshop");
-        }else if (manageError.equals("coins")){
-            System.err.println("Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins");
-        }else if (manageError.equals("Invalid")){
-            System.err.println("Invalid Input !");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Wrong name selected");
-        }else {
-            String[] word = manageError.split("\\s+");
-            System.out.println(ANSI_BLUE + "Great! you bought a " + word[0] + "\nnow you can create "+word[2]+" from "+word[1]);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"you bought "+word[0]);
-        }
-    }
+//    private void processBuildWorkshop(String[] split){
+//        String manageError = manager.buyWorkshop(split[1]);
+//        if (manageError.equals("have")){
+//            System.err.println("You have bought this workshop before...");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"have bought this workshop");
+//        }else if (manageError.equals("coins")){
+//            System.err.println("Sorry! You don't have enough coins");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins");
+//        }else if (manageError.equals("Invalid")){
+//            System.err.println("Invalid Input !");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Wrong name selected");
+//        }else {
+//            String[] word = manageError.split("\\s+");
+//            System.out.println(ANSI_BLUE + "Great! you bought a " + word[0] + "\nnow you can create "+word[2]+" from "+word[1]);
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"you bought "+word[0]);
+//        }
+//    }
     private void processUpgradeWorkshop(String[] split){
         String manageError = manager.upgradeWorkshop(split[2]);
         if (manageError.equals("error")){
@@ -168,9 +168,9 @@ public class InputProcessor {
     }
     private void updateGame() throws FileNotFoundException {
         manager.level.time.n++;
-        manager.move();
+        //manager.move();
         manager.eatGrass();
-        manager.reduceLife();
+        //manager.reduceLife();
         String checkWorkshop = manager.checkWorkshops();
         if (!checkWorkshop.equals("notReady")) {
             System.out.println(ANSI_GREEN + checkWorkshop + " producing process finished." + " your product is ready.");
@@ -179,10 +179,10 @@ public class InputProcessor {
         manager.collectProducts();
         manager.destroyDomesticAnimalAndProduct();
         manager.destroyWildAnimal();
-        manager.disappearProduct();
-        manager.appearWildAnimal();
+        //manager.disappearProduct();
+        //manager.appearWildAnimal();
         manager.decreaseCageLevel();
-        manager.isAnimalManufacturedProduct();
+        //manager.isAnimalManufacturedProduct();
         int sellProducts = manager.sellProducts();
         if (sellProducts != -1 && sellProducts != 0)
             System.out.println(ANSI_GREEN+"Products loaded to the truck sold for "+sellProducts);
@@ -280,7 +280,7 @@ public class InputProcessor {
             } else if (input.matches("^(?i)(truck\\s+go)\\s*$")) {
                 processStartTrip();
             } else if (input.matches("^(?i)(Build)\\s+(\\w+)\\s*$")) {
-                processBuildWorkshop(input.split("\\s+"));
+                //processBuildWorkshop(input.split("\\s+"));
             } else if (input.matches("^(?i)(Upgrade\\s+Workshop)\\s+(\\w+)\\s*$")) {
                 processUpgradeWorkshop(input.split("\\s+"));
             } else if (input.matches("(?i)(inquiry)")) {

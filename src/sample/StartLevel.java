@@ -255,7 +255,11 @@ public class StartLevel {
         final int[] second = {0};
         final int[] minute = {0};
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
-            update();
+            try {
+                update();
+            } catch (FileNotFoundException fileNotFoundException) {
+                fileNotFoundException.printStackTrace();
+            }
             timeLbl.setText("Time: "+ minute[0] + ":" + second[0]);
             second[0] = second[0] +1 ;
             if (second[0] == 60){
@@ -288,7 +292,12 @@ public class StartLevel {
                     alert.setContentText("Are you sure you want to build a "+WSBtnNames[workshopBuildBtn.indexOf(imageView)]+"?");
                     alert.showAndWait();
                     if (alert.getResult() == ButtonType.YES){
-                        String result = manager.buyWorkshop(WSBtnNames[workshopBuildBtn.indexOf(imageView)]);
+                        String result = null;
+                        try {
+                            result = manager.buyWorkshop(WSBtnNames[workshopBuildBtn.indexOf(imageView)]);
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
                         if (result.equals("coins")){
                             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry you don't have enough coin...");
                         }
@@ -320,10 +329,14 @@ public class StartLevel {
         }
     }
 
-    void update(){
+    void update() throws FileNotFoundException {
         coinLbl.setText("Coins: "+MainMenu.player.getCoins());
         level.time.n++;
         manager.move();
+        manager.reduceLife();
+        manager.isAnimalManufacturedProduct(ground);
+        manager.appearWildAnimal(ground);
+        manager.disappearProduct();
     }
 
     @FXML

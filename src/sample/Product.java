@@ -1,11 +1,18 @@
 package sample;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class Product {
     private String name;
     private int sellingPrice;
     private int barnSpace;
     private int disappearTime;
     private TIME startDisappearTime;
+    public ImageView image;
     private int X;
     private int Y;
 
@@ -41,7 +48,7 @@ public class Product {
         this.startDisappearTime = startDisappearTime;
     }
 
-    public Product(String name, int sellingPrice, int barnSpace, int disappearTime, TIME startDisappearTime, int X, int Y) {
+    public Product(String name, int sellingPrice, int barnSpace, int disappearTime, TIME startDisappearTime, int X, int Y) throws FileNotFoundException {
         this.name = name;
         this.sellingPrice = sellingPrice;
         this.barnSpace = barnSpace;
@@ -49,6 +56,9 @@ public class Product {
         this.X = X;
         this.Y = Y;
         this.startDisappearTime = startDisappearTime;
+        this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\"+name+"1.png")));
+        this.image.setFitHeight(50);
+        this.image.setFitWidth(50);
     }
 
     public Product(Product product) {

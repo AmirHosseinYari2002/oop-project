@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class Mill extends WorkShop{
 
-    public Mill() {
+    public Mill() throws FileNotFoundException {
         this.level = 1;
         this.cost = 150;
         this.productionTime = new TIME(4);
@@ -18,7 +20,7 @@ public class Mill extends WorkShop{
 
     //Singleton Design
     private static Mill millInstance;
-    public static Mill getInstance(){
+    public static Mill getInstance() throws FileNotFoundException {
         if (millInstance==null){
             millInstance = new Mill();
         }

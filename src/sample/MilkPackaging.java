@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class MilkPackaging extends WorkShop{
 
-    public MilkPackaging() {
+    public MilkPackaging() throws FileNotFoundException {
         this.level = 1;
         this.cost = 400;
         this.productionTime = new TIME(6);
@@ -18,7 +20,7 @@ public class MilkPackaging extends WorkShop{
 
     //Singleton Design
     private static MilkPackaging milkPackagingInstance;
-    public static MilkPackaging getInstance(){
+    public static MilkPackaging getInstance() throws FileNotFoundException {
         if (milkPackagingInstance==null){
             milkPackagingInstance = new MilkPackaging();
         }

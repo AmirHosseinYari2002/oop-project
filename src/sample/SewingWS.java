@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class SewingWS extends WorkShop{
 
-    public SewingWS() {
+    public SewingWS() throws FileNotFoundException {
         this.level = 1;
         this.cost = 400;
         this.productionTime = new TIME(6);
@@ -18,7 +20,7 @@ public class SewingWS extends WorkShop{
 
     //Singleton Design
     private static SewingWS sewingWSInstance;
-    public static SewingWS getInstance(){
+    public static SewingWS getInstance() throws FileNotFoundException {
         if (sewingWSInstance==null){
             sewingWSInstance = new SewingWS();
         }

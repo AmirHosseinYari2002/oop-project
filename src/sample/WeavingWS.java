@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class WeavingWS extends WorkShop{
 
-    public WeavingWS() {
+    public WeavingWS() throws FileNotFoundException {
         this.level = 1;
         this.cost = 250;
         this.productionTime = new TIME(5);
@@ -18,7 +20,7 @@ public class WeavingWS extends WorkShop{
 
     //Singleton Design
     private static WeavingWS weavingWSInstance;
-    public static WeavingWS getInstance(){
+    public static WeavingWS getInstance() throws FileNotFoundException {
         if (weavingWSInstance==null){
             weavingWSInstance = new WeavingWS();
         }

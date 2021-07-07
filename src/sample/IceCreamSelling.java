@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class IceCreamSelling extends WorkShop{
 
-    public IceCreamSelling() {
+    public IceCreamSelling() throws FileNotFoundException {
         this.level = 1;
         this.cost = 550;
         this.productionTime = new TIME(7);
@@ -18,7 +20,7 @@ public class IceCreamSelling extends WorkShop{
 
     //Singleton Design
     private static IceCreamSelling iceCreamSellingInstance;
-    public static IceCreamSelling getInstance(){
+    public static IceCreamSelling getInstance() throws FileNotFoundException {
         if (iceCreamSellingInstance==null){
             iceCreamSellingInstance = new IceCreamSelling();
         }

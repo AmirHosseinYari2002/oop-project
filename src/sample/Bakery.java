@@ -1,8 +1,10 @@
 package sample;
 
+import java.io.FileNotFoundException;
+
 public class Bakery extends WorkShop{
 
-    public Bakery() {
+    public Bakery() throws FileNotFoundException {
         this.level = 1;
         this.cost = 250;
         this.productionTime = new TIME(5);
@@ -18,7 +20,7 @@ public class Bakery extends WorkShop{
 
     //Singleton Design
     private static Bakery bakeryInstance;
-    public static Bakery getInstance(){
+    public static Bakery getInstance() throws FileNotFoundException {
         if (bakeryInstance==null){
             bakeryInstance = new Bakery();
         }
