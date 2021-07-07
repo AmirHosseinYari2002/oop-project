@@ -191,7 +191,15 @@ public class StartLevel {
 
     @FXML
     void travel(MouseEvent event) {
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("showTruck.fxml"));
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("Truck");
+            primaryStage.setScene(new Scene(root, 750, 465));
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -337,6 +345,9 @@ public class StartLevel {
         manager.isAnimalManufacturedProduct(ground);
         manager.appearWildAnimal(ground);
         manager.disappearProduct();
+        int sellProducts = manager.sellProducts();
+        if (sellProducts != -1 && sellProducts != 0)
+            GUI.playSound(new File("src\\sample\\pictures\\car.wav")).start();
     }
 
     @FXML
