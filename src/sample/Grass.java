@@ -17,6 +17,9 @@ public class Grass {
     public int getY() {
         return Y;
     }
+    public ImageView getImg() {
+        return img;
+    }
     public void setX(int x) {
         X = x;
     }
@@ -24,22 +27,14 @@ public class Grass {
         Y = y;
     }
 
-    public Grass(int x, int y) {
+    public Grass(int x, int y) throws FileNotFoundException {
         X = x;
         Y = y;
+        this.img = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\grass.png")));
+        img.setFitWidth(50);
+        img.setFitHeight(42);
     }
 
     public Grass() {
-    }
-
-    public ImageView getImg() {
-        return img;
-    }
-
-    public void setImg() throws FileNotFoundException {
-        img = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\grass.png")));
-        img.setFitWidth(50);
-        img.setFitHeight(42);
-        img.setVisible(true);
     }
 }

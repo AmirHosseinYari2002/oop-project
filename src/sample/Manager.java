@@ -1,8 +1,10 @@
 package sample;//import com.google.gson.Gson;
 
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -190,6 +192,7 @@ public class Manager {
             for (Grass grass : grassesList) {
                 if (grass.getX() == domesticAnimal.X  &&  grass.getY() == domesticAnimal.Y  &&  domesticAnimal.remainingLife <= 50){
                     domesticAnimal.remainingLife = 100;
+                    grass.getImg().setVisible(false);
                     removeGrassList.add(grass);
                 }
             }
@@ -441,13 +444,20 @@ public class Manager {
     }
     public ImageView planting(int x, int y) throws FileNotFoundException {
         if (Well.getInstance().getRemainingWater() > 0) {
+            for (Grass grass : grassesList) {
+                if (grass.getX() == x  &&  grass.getY() == y) {
+                    ImageView img = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\errorGrass.png")));
+                    img.setFitWidth(80);
+                    img.setFitHeight(50);
+                    return img;
+                }
+            }
             Grass grass = new Grass(x, y);
             grassesList.add(grass);
             Well.getInstance().setRemainingWater(Well.getInstance().getRemainingWater()-1);
-            grass.setImg();
+            grass.getImg().setX(x);
+            grass.getImg().setY(y);
             return grass.getImg();
-        }else {
-            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket is empty!...");
         }
         return null;
     }

@@ -152,9 +152,14 @@ public class StartLevel {
     void plantGrass(MouseEvent event) throws FileNotFoundException {
         ImageView imageView = manager.planting((int) event.getX() ,(int) event.getY());
         if (imageView != null){
-            imageView.setX(event.getX()-groundBack.getX());
-            imageView.setY(event.getY()-groundBack.getY()-25);
-            ground.getChildren().addAll(imageView);
+            if (imageView.getFitHeight() == 50  &&  imageView.getFitWidth() == 80){
+                GUI.createAlert(Alert.AlertType.ERROR,"ERROR","There is grass in this location");
+            }else {
+                imageView.setVisible(true);
+                ground.getChildren().addAll(imageView);
+            }
+        }else {
+            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket is empty!");
         }
     }
 

@@ -1205,3 +1205,10 @@ Wed Jul 07 10:13:02 IRDT 2021 [ERROR] buy buffalo
 Wed Jul 07 10:13:11 IRDT 2021 [ERROR] buy hen
 Wed Jul 07 10:13:42 IRDT 2021 [ERROR] buy hen
 Wed Jul 07 10:13:46 IRDT 2021 [ERROR] buy buffalo
+Wed Jul 07 10:27:47 IRDT 2021 [INFO] Signed In successfully
+Wed Jul 07 10:40:03 IRDT 2021 [INFO] Signed In successfully
+Wed Jul 07 10:40:07 IRDT 2021 [ERROR] buy hen
+Wed Jul 07 10:40:11 IRDT 2021 [ERROR] The bucket still has water
+Wed Jul 07 10:40:28 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Wed Jul 07 10:40:32 IRDT 2021 [ERROR] The bucket still has water
+Wed Jul 07 10:40:38 IRDT 2021 [INFO] The bucket of water was filled
