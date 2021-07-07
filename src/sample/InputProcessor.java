@@ -12,19 +12,19 @@ public class InputProcessor {
     }
 
 
-    private void processBuyAnimal(String[] split){
-        String manageError = manager.buyAnimal(split[1]);
-        if (manageError.equals("Coins")){
-            System.err.println("Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy animal");
-        }else if (manageError.equals("ERROR")){
-            System.err.println("Invalid Input!");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Invalid animal name entered");
-        }else {
-            System.out.println(ANSI_PURPLE + "The purchase was successful.\nYou bought " + manageError);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"purchase animal was successful");
-        }
-    }
+//    private void processBuyAnimal(String[] split){
+//        String manageError = manager.buyAnimal(split[1]);
+//        if (manageError.equals("Coins")){
+//            System.err.println("Sorry! You don't have enough coins");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy animal");
+//        }else if (manageError.equals("ERROR")){
+//            System.err.println("Invalid Input!");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Invalid animal name entered");
+//        }else {
+//            System.out.println(ANSI_PURPLE + "The purchase was successful.\nYou bought " + manageError);
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"purchase animal was successful");
+//        }
+//    }
     private void processPickupProduct(String[] split){
         String manageError = manager.pickupProduct(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
         if (manageError.equals("wrongLocation")){
@@ -259,7 +259,7 @@ public class InputProcessor {
         while (!manager.isLevelCompleted()) {
             String input = scanner.nextLine();
             if (input.matches("^(?i)buy\\s+(\\w+)\\s*$")) {
-                processBuyAnimal(input.split("\\s+"));
+                //processBuyAnimal(input.split("\\s+"));
             } else if (input.matches("^(?i)pickup\\s+(\\d\\s+\\d)\\s*$")) {
                 processPickupProduct(input.split("\\s+"));
             } else if (input.matches("^(?i)well\\s*$")) {

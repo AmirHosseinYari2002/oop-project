@@ -79,29 +79,29 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fx:id="henIcon" fitHeight="74.0" fitWidth="98.0" layoutX="320.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="henIcon" fitHeight="74.0" fitWidth="98.0" layoutX="320.0" layoutY="26.0" onMouseClicked="#buyHen" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/henIcon.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="catIcon" fitHeight="80.0" fitWidth="74.0" layoutX="408.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="catIcon" fitHeight="80.0" fitWidth="74.0" layoutX="408.0" layoutY="28.0" onMouseClicked="#buyCat" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/catIcon.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="dogIcon" fitHeight="86.0" fitWidth="74.0" layoutX="492.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dogIcon" fitHeight="86.0" fitWidth="74.0" layoutX="492.0" layoutY="28.0" onMouseClicked="#buyHound" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/dogIcon.png" />
          </image>
       </ImageView>
       <Circle fill="DODGERBLUE" layoutX="615.0" layoutY="65.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <ImageView fx:id="turkeyIcon" fitHeight="67.0" fitWidth="61.0" layoutX="585.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="turkeyIcon" fitHeight="67.0" fitWidth="61.0" layoutX="585.0" layoutY="34.0" onMouseClicked="#buyTurkey" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/turkey.png" />
          </image>
       </ImageView>
       <Circle fill="#ff1fcc" layoutX="703.0" layoutY="65.0" radius="37.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <ImageView fx:id="buffaloIcon" fitHeight="61.0" fitWidth="61.0" layoutX="674.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="buffaloIcon" fitHeight="61.0" fitWidth="61.0" layoutX="674.0" layoutY="35.0" onMouseClicked="#buyBuffalo" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/buffaloIcon.png" />
          </image>

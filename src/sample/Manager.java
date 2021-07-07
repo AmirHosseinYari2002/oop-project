@@ -262,53 +262,53 @@ public class Manager {
             }
         }
     }
-    public String buyAnimal(String name){
+    public Animal buyAnimal(String name){
         switch (name){
             case "Buffalo" -> {
                 if (player.getCoins() >= 400) {
-                    Buffalo buffalo = new Buffalo(random.nextInt(6)+1,random.nextInt(6)+1);
+                    Buffalo buffalo = new Buffalo(random.nextInt(800)+250,random.nextInt(400)+150);
                     player.setCoins(player.getCoins()-buffalo.price);
                     domesticAnimalsList.add(buffalo);
                     buffalo.startProduceProduct = new TIME(level.time.n);
-                    return buffalo.name;
-                }else return "Coins";
+                    return buffalo;
+                }else return null;
             }
             case "Cat" -> {
                 if (player.getCoins() >= 150) {
-                    Cat cat = new Cat(random.nextInt(6)+1,random.nextInt(6)+1);
+                    Cat cat = new Cat(random.nextInt(800)+250,random.nextInt(400)+150);
                     player.setCoins(player.getCoins()-cat.price);
                     catsList.add(cat);
-                    return cat.name;
-                }else return "Coins";
+                    return cat;
+                }else return null;
             }
             case "Hen" -> {
                 if (player.getCoins() >= 100) {
-                    Hen hen = new Hen(random.nextInt(6)+1,random.nextInt(6)+1);
+                    Hen hen = new Hen(random.nextInt(800)+250,random.nextInt(400)+150);
                     player.setCoins(player.getCoins()-hen.price);
                     domesticAnimalsList.add(hen);
                     hen.startProduceProduct = new TIME(level.time.n);
-                    return hen.name;
-                }else return "Coins";
+                    return hen;
+                }else return null;
             }
             case "Hound" -> {
                 if (player.getCoins() >= 100) {
-                    Hound hound = new Hound(random.nextInt(6)+1,random.nextInt(6)+1);
+                    Hound hound = new Hound(random.nextInt(800)+250,random.nextInt(400)+150);
                     player.setCoins(player.getCoins()-hound.price);
                     houndsList.add(hound);
-                    return hound.name;
-                }else return "Coins";
+                    return hound;
+                }else return null;
             }
             case "Turkey" -> {
                 if (player.getCoins() >= 200) {
-                    Turkey turkey = new Turkey(random.nextInt(6)+1,random.nextInt(6)+1);
+                    Turkey turkey = new Turkey(random.nextInt(800)+250,random.nextInt(400)+150);
                     player.setCoins(player.getCoins()-turkey.price);
                     domesticAnimalsList.add(turkey);
                     turkey.startProduceProduct = new TIME(level.time.n);
-                    return turkey.name;
-                }else return "Coins";
+                    return turkey;
+                }else return null;
             }
         }
-        return "ERROR";
+        return null;
     }
     public String buyWorkshop(String name){
         for (WorkShop workShop : workShops) {
