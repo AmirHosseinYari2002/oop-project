@@ -20,6 +20,7 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
@@ -336,21 +337,60 @@ public class StartLevel {
                 }
             });
         }
+        Thread moveThread = new Thread() {
+            public void run() {
+                try {
+                    for(;;) {
+                        manager.move();
+                        sleep(50);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };moveThread.start();
     }
 
     void update() throws FileNotFoundException {
         coinLbl.setText("Coins: "+MainMenu.player.getCoins());
         level.time.n++;
-        manager.move();
-        manager.reduceLife();
+        //manager.move();
+        manager.eatGrass(ground);
+        manager.reduceLife(ground);
         manager.isAnimalManufacturedProduct(ground);
-        manager.collectProducts();
+        manager.collectProducts(ground);
         manager.appearWildAnimal(ground);
-        manager.disappearProduct();
+        manager.disappearProduct(ground);
+        manager.destroyWildAnimal(ground);
+        manager.destroyDomesticAnimalAndProduct(ground);
         int sellProducts = manager.sellProducts();
         if (sellProducts != -1 && sellProducts != 0)
             GUI.playSound(new File("src\\sample\\pictures\\car.wav")).start();
         manager.checkWorkshops(ground);
+        String task = manager.checkTasks();
+        if (task.equals("coins")){
+            GUI.playSound(new File("src\\sample\\pictures\\finishChime.wav")).start();
+            GUI.createAlert(Alert.AlertType.INFORMATION,"Tasks","Good! You complete a task. Your coins reach the desired amount.");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"coins reach the desired amount");
+            String tasks = "";
+            for (Map.Entry<String, Integer> entry : level.tasks.entrySet()) {
+                tasks += entry.getKey() + ":" + entry.getValue().toString()+"\n";
+            }
+            tasksLbl.setText(tasks);
+        }else if (!task.equals("null")){
+            GUI.playSound(new File("src\\sample\\pictures\\finishChime.wav")).start();
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+task+" reach the desired amount.");
+            String tasks = "";
+            for (Map.Entry<String, Integer> entry : level.tasks.entrySet()) {
+                tasks += entry.getKey() + ":" + entry.getValue().toString()+"\n";
+            }
+            System.out.println(tasks);
+            tasksLbl.setText(tasks);
+        }
+        if (manager.isLevelCompleted()){
+            GUI.playSound(new File("src\\sample\\pictures\\finish.wav")).start();
+            System.exit(0);
+        }
     }
 
     @FXML

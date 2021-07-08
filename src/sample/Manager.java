@@ -14,8 +14,8 @@ import java.util.*;
 public class Manager {
     Levels level;
     Player player;
-    final static int mapWidth = 880;
-    final static int mapHeight = 480;
+    final static int mapWidth = 450;
+    final static int mapHeight = 200;
     final static int distanceMapAndPageWidth = 250;
     final static int distanceMapAndPageHeight = 150;
 
@@ -147,13 +147,13 @@ public class Manager {
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (cat.X == mapWidth){
+                    if (cat.X >= mapWidth){
                         a = -a;
                     }
                     cat.X += a;
                     cat.image.setX(cat.X);
                 }else {
-                    if (cat.Y == mapHeight){
+                    if (cat.Y >= mapHeight){
                         a = -a;
                     }
                     cat.Y += a;
@@ -164,13 +164,13 @@ public class Manager {
         for (Hound hound : houndsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (hound.X == mapWidth){
+                if (hound.X >= mapWidth){
                     a = -a;
                 }
                 hound.X += a;
                 hound.image.setX(hound.X);
             }else {
-                if (hound.Y == mapHeight){
+                if (hound.Y >= mapHeight){
                     a = -a;
                 }
                 hound.Y += a;
@@ -180,13 +180,13 @@ public class Manager {
         for (WildAnimal wildAnimal : wildAnimalsList) {
             int a = 1;
             if (random.nextInt(2) == 0){
-                if (wildAnimal.X == mapWidth){
+                if (wildAnimal.X >= mapWidth){
                     a = -a;
                 }
                 wildAnimal.X += a;
                 wildAnimal.image.setX(wildAnimal.X);
             }else {
-                if (wildAnimal.Y == mapHeight){
+                if (wildAnimal.Y >= mapHeight){
                     a = -a;
                 }
                 wildAnimal.Y += a;
@@ -194,12 +194,11 @@ public class Manager {
             }
         }
     }
-    public void eatGrass(){
+    public void eatGrass(AnchorPane pane){
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
             for (Grass grass : grassesList) {
-                if (grass.getX() == domesticAnimal.X  &&  grass.getY() == domesticAnimal.Y  &&  domesticAnimal.remainingLife <= 50){
+                if (grass.getImg().getBoundsInParent().intersects(domesticAnimal.image.getBoundsInParent())  &&  domesticAnimal.remainingLife <= 50){
                     domesticAnimal.remainingLife = 100;
-                    grass.getImg().setVisible(false);
                     removeGrassList.add(grass);
                 }
             }
@@ -207,15 +206,16 @@ public class Manager {
         for (Grass grass : removeGrassList) {
             if (grassesList.contains(grass)){
                 grassesList.remove(grass);
+                pane.getChildren().remove(grass.getImg());
             }
         }
     }
-    public void reduceLife(){
+    public void reduceLife(AnchorPane pane){
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
             domesticAnimal.remainingLife -= 1;
             if (domesticAnimal.remainingLife <= 0){
                 removeAnimalList.add(domesticAnimal);
-                domesticAnimal.image.setVisible(false);
+                pane.getChildren().remove(domesticAnimal.image);
             }
         }
         for (Animal animal : removeAnimalList) {
@@ -224,22 +224,26 @@ public class Manager {
             }
         }
     }
-    public void destroyDomesticAnimalAndProduct(){
+    public void destroyDomesticAnimalAndProduct(AnchorPane pane){
         for (WildAnimal wildAnimal : wildAnimalsList) {
             for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
-                if (wildAnimal.X == domesticAnimal.X  &&  wildAnimal.Y == domesticAnimal.Y){
+                if (wildAnimal.image.getBoundsInParent().intersects(domesticAnimal.image.getBoundsInParent())){
                     removeAnimalList.add(domesticAnimal);
+                    pane.getChildren().remove(domesticAnimal.image);
                 }
             }
             for (Product product : productsList) {
-                if (product.getX() == wildAnimal.X  &&  product.getY() == wildAnimal.Y){
+                if (wildAnimal.image.getBoundsInParent().intersects(product.image.getBoundsInParent())){
                     removeProductList.add(product);
+                    pane.getChildren().remove(product.image);
                 }
             }
         }
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
-            if (domesticAnimal.remainingLife == 0)
+            if (domesticAnimal.remainingLife == 0){
                 removeAnimalList.add(domesticAnimal);
+                pane.getChildren().remove(domesticAnimal.image);
+            }
         }
         for (Product product : removeProductList) {
             if (productsList.contains(product))
@@ -250,28 +254,33 @@ public class Manager {
                 domesticAnimalsList.remove(animal);
         }
     }
-    public void destroyWildAnimal(){
+    public void destroyWildAnimal(AnchorPane pane){
         for (Hound hound : houndsList) {
             for (WildAnimal wildAnimal : wildAnimalsList) {
-                if (hound.X == wildAnimal.X  &&  hound.Y == wildAnimal.Y){
+                if (hound.image.getBoundsInParent().intersects(wildAnimal.image.getBoundsInParent())){
                     removeAnimalList.add(hound);
                     removeAnimalList.add(wildAnimal);
                 }
             }
         }
         for (Animal animal : removeAnimalList) {
-            if (houndsList.contains(animal))
+            if (houndsList.contains(animal)){
                 houndsList.remove(animal);
-            if (wildAnimalsList.contains(animal))
+                pane.getChildren().remove(animal.image);
+            }
+            if (wildAnimalsList.contains(animal)){
                 wildAnimalsList.remove(animal);
+                pane.getChildren().remove(animal.image);
+            }
         }
 
     }
-    public void collectProducts(){
+    public void collectProducts(AnchorPane pane){
         for (Cat cat : catsList) {
             for (Product product : productsList) {
-                if (product.getX() == cat.X  &&  product.getY() == cat.Y  &&  Barn.getInstance().getFreeSpace() >= product.getBarnSpace()){
+                if (product.image.getBoundsInParent().intersects(cat.image.getBoundsInParent())  &&  Barn.getInstance().getFreeSpace() >= product.getBarnSpace()){
                     removeProductList.add(product);
+                    pane.getChildren().remove(product.image);
                     productsInBarn.put(product,1);
                     Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()-product.getBarnSpace());
                 }
@@ -506,6 +515,7 @@ public class Manager {
             if (workShop.isProductReady(level.time)){
                 for (int i = 0; i < workShop.level; i++) {
                     Product product = workShop.producing();
+                    product.setStartDisappearTime(level.time);
                     productsList.add(product);
                     product.image.setX(300);
                     product.image.setY(300);
@@ -758,11 +768,11 @@ public class Manager {
             }
         }
     }
-    public void disappearProduct(){
+    public void disappearProduct(AnchorPane pane){
         for (Product product : productsList) {
             if (TIME.diff(product.getStartDisappearTime(),level.time) == product.getDisappearTime()){
                 removeProductList.add(product);
-                product.image.setVisible(false);
+                pane.getChildren().remove(product.image);
             }
         }
         for (Product product : removeProductList) {

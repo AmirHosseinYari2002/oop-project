@@ -169,7 +169,7 @@ public class InputProcessor {
     private void updateGame() throws FileNotFoundException {
         manager.level.time.n++;
         //manager.move();
-        manager.eatGrass();
+        //manager.eatGrass();
         //manager.reduceLife();
         //String checkWorkshop = manager.checkWorkshops();
 //        if (!checkWorkshop.equals("notReady")) {
@@ -177,8 +177,8 @@ public class InputProcessor {
 //            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The product of "+checkWorkshop+" is ready");
 //        }
         //manager.collectProducts();
-        manager.destroyDomesticAnimalAndProduct();
-        manager.destroyWildAnimal();
+        //manager.destroyDomesticAnimalAndProduct();
+        //manager.destroyWildAnimal();
         //manager.disappearProduct();
         //manager.appearWildAnimal();
         manager.decreaseCageLevel();
