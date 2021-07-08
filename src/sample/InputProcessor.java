@@ -26,19 +26,19 @@ public class InputProcessor {
 //            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"purchase animal was successful");
 //        }
 //    }
-    private void processPickupProduct(String[] split){
-        String manageError = manager.pickupProduct(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
-        if (manageError.equals("wrongLocation")){
-            System.err.println("ERROR! The selected location is incorrect.");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"wrong  location was selected for pickup product");
-        }else if (manageError.equals("barnSpace")){
-            System.err.println("You do not have enough space in the Barn !");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Barn is full and product did not picked up");
-        }else{
-            System.out.println(ANSI_YELLOW+manageError+" was transferred to Barn");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"product picked up");
-        }
-    }
+//    private void processPickupProduct(String[] split){
+//        String manageError = manager.pickupProduct(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
+//        if (manageError.equals("wrongLocation")){
+//            System.err.println("ERROR! The selected location is incorrect.");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"wrong  location was selected for pickup product");
+//        }else if (manageError.equals("barnSpace")){
+//            System.err.println("You do not have enough space in the Barn !");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Barn is full and product did not picked up");
+//        }else{
+//            System.out.println(ANSI_YELLOW+manageError+" was transferred to Barn");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"product picked up");
+//        }
+//    }
     private void processFillWaterBucket(){
         String manageError = manager.fillWaterBucket();
         if (manageError.equals("haveWater")) {
@@ -171,12 +171,12 @@ public class InputProcessor {
         //manager.move();
         manager.eatGrass();
         //manager.reduceLife();
-        String checkWorkshop = manager.checkWorkshops();
-        if (!checkWorkshop.equals("notReady")) {
-            System.out.println(ANSI_GREEN + checkWorkshop + " producing process finished." + " your product is ready.");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The product of "+checkWorkshop+" is ready");
-        }
-        manager.collectProducts();
+        //String checkWorkshop = manager.checkWorkshops();
+//        if (!checkWorkshop.equals("notReady")) {
+//            System.out.println(ANSI_GREEN + checkWorkshop + " producing process finished." + " your product is ready.");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The product of "+checkWorkshop+" is ready");
+//        }
+        //manager.collectProducts();
         manager.destroyDomesticAnimalAndProduct();
         manager.destroyWildAnimal();
         //manager.disappearProduct();
@@ -262,7 +262,7 @@ public class InputProcessor {
             if (input.matches("^(?i)buy\\s+(\\w+)\\s*$")) {
                 //processBuyAnimal(input.split("\\s+"));
             } else if (input.matches("^(?i)pickup\\s+(\\d\\s+\\d)\\s*$")) {
-                processPickupProduct(input.split("\\s+"));
+                //processPickupProduct(input.split("\\s+"));
             } else if (input.matches("^(?i)well\\s*$")) {
                 processFillWaterBucket();
             } else if (input.matches("^(?i)plant\\s+(\\d\\s+\\d)\\s*$")) {

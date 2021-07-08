@@ -19,8 +19,8 @@ public class ShowBarn {
     @FXML
     private ListView<String> data;
 
-    @FXML
-    private ProgressBar barnCapacity;
+   @FXML
+   private ProgressBar barnCapacity;
 
     @FXML
     private ImageView warning;

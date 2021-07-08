@@ -24,7 +24,7 @@
             <Image url="@../sample/pictures/Well.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="truck" fitHeight="240.0" fitWidth="270.0" layoutX="782.0" layoutY="569.0" onMouseClicked="#travel" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="truck" fitHeight="174.0" fitWidth="283.0" layoutX="782.0" layoutY="640.0" onMouseClicked="#travel" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/truck.png" />
          </image>

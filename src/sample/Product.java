@@ -1,7 +1,9 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -68,6 +70,7 @@ public class Product {
         this.barnSpace = product.barnSpace;
         this.X = product.X;
         this.Y = product.Y;
+        this.image = product.image;
     }
 
     public Product(){

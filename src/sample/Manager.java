@@ -1,8 +1,10 @@
 package sample;//import com.google.gson.Gson;
 
+import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.FileInputStream;
@@ -415,10 +417,11 @@ public class Manager {
         }
         return "error";
     }
-    public String pickupProduct(int x, int y){
+    public String pickupProduct(int x, int y, AnchorPane pane){
         for (Product product : productsList) {
             if (product.getX() == x  &&  product.getY() == y){
                 if (Barn.getInstance().getFreeSpace() >= product.getBarnSpace()) {
+                    pane.getChildren().remove(product.image);
                     removeProductList.add(product);
                     productsInBarn.put(product,1);
                     Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()-product.getBarnSpace());
@@ -473,7 +476,7 @@ public class Manager {
                 Product[] product = new Product[workShop.level];
                 int i = 0;
                 for (Map.Entry<Product, Integer> entry : productsInBarn.entrySet()){
-                    if (entry.getKey().getName().equals(workShop.input.getName()) && i < 2){
+                    if (entry.getKey().getName().equals(workShop.input.getName()) && i < workShop.level){
                         product[i] = entry.getKey();
                         i++;
                     }
@@ -498,12 +501,22 @@ public class Manager {
         }
         return "a";
     }
-    public String checkWorkshops(){
+    public String checkWorkshops(AnchorPane pane){
         for (WorkShop workShop : workShops) {
             if (workShop.isProductReady(level.time)){
                 for (int i = 0; i < workShop.level; i++) {
                     Product product = workShop.producing();
                     productsList.add(product);
+                    product.image.setX(300);
+                    product.image.setY(300);
+                    product.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+                            pickupProduct(product.getX(),product.getY(),pane);
+
+                        }
+                    });
+                    pane.getChildren().addAll(product.image);
                     product.setStartDisappearTime(level.time);
                 }
                 workShop.setStartTime(new TIME(0));
@@ -734,6 +747,13 @@ public class Manager {
                 product.image.setX(product.getX());
                 product.image.setY(product.getY());
                 product.image.setVisible(true);
+                product.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        pickupProduct(product.getX(),product.getY(),ground);
+
+                    }
+                });
                 ground.getChildren().addAll(product.image);
             }
         }

@@ -33,7 +33,7 @@
             <DropShadow spread="0.33" />
          </effect>
       </ListView>
-      <ProgressBar fx:id="barnCapacity" layoutX="333.0" layoutY="413.0" prefHeight="19.0" prefWidth="298.0" progress="0.0" />
+      <ProgressBar fx:id="barnCapacity" layoutX="333.0" layoutY="413.0" prefHeight="19.0" prefWidth="307.0" progress="0.0" />
       <Label layoutX="204.0" layoutY="409.0" text="Barn Capacity" textFill="WHITE">
          <font>
             <Font name="System Italic" size="18.0" />

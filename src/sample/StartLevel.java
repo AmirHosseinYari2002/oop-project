@@ -306,9 +306,11 @@ public class StartLevel {
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
-                        if (result.equals("coins")){
-                            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry you don't have enough coin...");
-                        }
+                        if (result != null)
+                            if (result.equals("coins")){
+                              GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry you don't have enough coin...");
+                            }
+
                         else {
                             imageView.setVisible(false);
                             workshopUpgradeBtn.get(workshopBuildBtn.indexOf(imageView)).setVisible(true);
@@ -329,7 +331,6 @@ public class StartLevel {
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"do not have the raw materials to produce the product");
                     }else {
                         GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
-                        imageView.setDisable(true);
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
                     }
                 }
@@ -343,11 +344,13 @@ public class StartLevel {
         manager.move();
         manager.reduceLife();
         manager.isAnimalManufacturedProduct(ground);
+        manager.collectProducts();
         manager.appearWildAnimal(ground);
         manager.disappearProduct();
         int sellProducts = manager.sellProducts();
         if (sellProducts != -1 && sellProducts != 0)
             GUI.playSound(new File("src\\sample\\pictures\\car.wav")).start();
+        manager.checkWorkshops(ground);
     }
 
     @FXML
