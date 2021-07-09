@@ -136,6 +136,9 @@ public class MainMenu {
         alert.setContentText("Are you sure you want to exit?");
         alert.showAndWait();
         if (alert.getResult() == ButtonType.YES){
+            FileManager.remove(authentication.getUsers(), player.getName());
+            String input = player.getName()+","+player.getPassword()+","+player.getLevel()+","+player.getCoins();
+            FileManager.addToFile(authentication.getUsers(),input);
             Stage stage = (Stage) exit.getScene().getWindow();
             stage.close();
             System.exit(0);
@@ -244,6 +247,9 @@ public class MainMenu {
         alert.setContentText("Are you sure you want to sign out?");
         alert.showAndWait();
         if (alert.getResult() == ButtonType.YES){
+            FileManager.remove(authentication.getUsers(), player.getName());
+            String input = player.getName()+","+player.getPassword()+","+player.getLevel()+","+player.getCoins();
+            FileManager.addToFile(authentication.getUsers(),input);
             Stage stage = (Stage) exit.getScene().getWindow();
             stage.close();
             Stage primaryStage = new Stage();

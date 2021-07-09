@@ -60,7 +60,7 @@ public class FinishLevel {
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Main Menu");
         primaryStage.setScene(new Scene(root, 1550, 800));
-        GUI.playSound(new File("src\\sample\\pictures\\Farmville.wav")).start();
+        GUI.mainSound.start();
         primaryStage.show();
     }
 }
