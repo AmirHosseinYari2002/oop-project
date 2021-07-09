@@ -9,6 +9,7 @@ public abstract class WorkShop {
     protected int upgradeCost;
     protected TIME startTime;
     protected String name;
+    protected boolean isWorking;
 
     public int getCost() {
         return cost;

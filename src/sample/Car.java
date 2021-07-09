@@ -5,6 +5,7 @@ public class Car {
     private int transferTime;
     private int emptySpace;
     private TIME startTrip;
+    public boolean isTraveling;
 
     public int getEmptySpace() {
         return emptySpace;

@@ -195,6 +195,10 @@ public class StartLevel {
     @FXML
     void travel(MouseEvent event) {
         try {
+            if (Car.getInstance().isTraveling){
+                GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Truck is traveling!...");
+                return;
+            }
             Parent root = FXMLLoader.load(getClass().getResource("showTruck.fxml"));
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Truck");
@@ -332,7 +336,10 @@ public class StartLevel {
                     if (result.equals("b")){
                         GUI.createAlert(Alert.AlertType.ERROR,"ERROR","You do not have the raw materials to produce the product !");
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"do not have the raw materials to produce the product");
-                    }else {
+                    }
+                    else if (result.equals("c"))
+                        GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Workshop is busy!...");
+                    else {
                         GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
                         FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
                     }

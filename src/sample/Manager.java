@@ -483,6 +483,9 @@ public class Manager {
     public String startingWorkshop(String name){
         for (WorkShop workShop : workShops) {
             if (workShop.name.equals(name)){
+                if (workShop.isWorking){
+                    return "c";
+                }
                 Product[] product = new Product[workShop.level];
                 int i = 0;
                 for (Map.Entry<Product, Integer> entry : productsInBarn.entrySet()){
@@ -492,17 +495,20 @@ public class Manager {
                     }
                 }
                 if (product[0] == null){
-                    System.out.println("ERROR");
                     return "b";
                 }
+                workShop.isWorking = true;
                 if (workShop.level == 1){
                     productsInBarn.remove(product[0]);
+                    Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[0].getBarnSpace());
                     workShop.setStartTime(level.time);
                     return workShop.name.concat(String.valueOf(workShop.productionTime));
                 }
                 if (product[1] != null){
                     productsInBarn.remove(product[0]);
                     productsInBarn.remove(product[1]);
+                    Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[0].getBarnSpace());
+                    Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[1].getBarnSpace());
                     workShop.setStartTime(level.time);
                     return workShop.name.concat(String.valueOf(workShop.productionTime));
                 }
@@ -514,6 +520,7 @@ public class Manager {
     public String checkWorkshops(AnchorPane pane){
         for (WorkShop workShop : workShops) {
             if (workShop.isProductReady(level.time)){
+                workShop.isWorking = false;
                 for (int i = 0; i < workShop.level; i++) {
                     Product product = workShop.producing();
                     product.setStartDisappearTime(level.time);
@@ -672,6 +679,7 @@ public class Manager {
     }
     public void startTrip(){
         Car.getInstance().setStartTrip(new TIME(level.time.n));
+        Car.getInstance().isTraveling = true;
     }
     public int checkTrip(){
         if (Car.getInstance().getStartTrip() == null)
@@ -684,6 +692,8 @@ public class Manager {
         if (Car.getInstance().getStartTrip() == null)
             return -1;
         if (Car.getInstance().IsCarBack(level.time)){
+            Car.getInstance().isTraveling = false;
+            Car.getInstance().setEmptySpace(15);
             int sellPrice = 0;
             if (!loadedProducts.isEmpty()){
                 for (Map.Entry<Product, Integer> entry : loadedProducts.entrySet()){
@@ -755,6 +765,8 @@ public class Manager {
                 Product product = domesticAnimal.outProduct(level.time);
                 domesticAnimal.startProduceProduct = new TIME(level.time.n);
                 product.setStartDisappearTime(new TIME(level.time));
+                product.setX(domesticAnimal.X+10);
+                product.setY(domesticAnimal.Y+10);
                 productsList.add(product);
                 product.image.setX(product.getX());
                 product.image.setY(product.getY());
