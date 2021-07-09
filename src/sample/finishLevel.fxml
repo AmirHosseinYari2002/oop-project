@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="369.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FinishLevel">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/winLavel.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bronzeCup" fitHeight="127.0" fitWidth="119.0" layoutX="243.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/BronzeCup.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="215.0" layoutY="33.0" text="Level complited" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="timeLbl" layoutX="214.0" layoutY="79.0" prefHeight="34.0" prefWidth="170.0" text="Your Time:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="giftLbl" layoutX="215.0" layoutY="120.0" prefHeight="34.0" prefWidth="170.0" text="Your Gift:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="silverCup" fitHeight="127.0" fitWidth="114.0" layoutX="242.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/SilverCup.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="goldenCup" fitHeight="127.0" fitWidth="114.0" layoutX="248.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/GoldenCup.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="524.0" layoutY="334.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+   </children>
+</AnchorPane>

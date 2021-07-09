@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -791,6 +792,7 @@ public class Manager {
                         tiger.image.setX(tiger.X);
                         tiger.image.setY(tiger.Y);
                         tiger.image.setVisible(true);
+                        GUI.playSound(new File("src\\sample\\pictures\\Tiger.wav")).start();
                         ground.getChildren().addAll(tiger.image);
                     }
                     case "Lion" ->{
@@ -799,6 +801,7 @@ public class Manager {
                         lion.image.setX(lion.X);
                         lion.image.setY(lion.Y);
                         lion.image.setVisible(true);
+                        GUI.playSound(new File("src\\sample\\pictures\\Lion.wav")).start();
                         ground.getChildren().addAll(lion.image);
                     }
                     case "Bear" ->{
@@ -807,6 +810,7 @@ public class Manager {
                         bear.image.setX(bear.X);
                         bear.image.setY(bear.Y);
                         bear.image.setVisible(true);
+                        GUI.playSound(new File("src\\sample\\pictures\\Tiger.wav")).start();
                         ground.getChildren().addAll(bear.image);
                     }
                 }

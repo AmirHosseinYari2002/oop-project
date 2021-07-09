@@ -30,6 +30,8 @@ public class StartLevel {
 
     public static Manager manager;
 
+    private static Timeline clock;
+
     private static final ArrayList<ImageView> workshopBuildBtn = new ArrayList<>();
 
     private static final ArrayList<ImageView> workshopUpgradeBtn = new ArrayList<>();
@@ -263,7 +265,7 @@ public class StartLevel {
         }
         final int[] second = {0};
         final int[] minute = {0};
-        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+        clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             try {
                 update();
             } catch (FileNotFoundException fileNotFoundException) {
@@ -384,12 +386,36 @@ public class StartLevel {
             for (Map.Entry<String, Integer> entry : level.tasks.entrySet()) {
                 tasks += entry.getKey() + ":" + entry.getValue().toString()+"\n";
             }
-            System.out.println(tasks);
             tasksLbl.setText(tasks);
         }
         if (manager.isLevelCompleted()){
             GUI.playSound(new File("src\\sample\\pictures\\finish.wav")).start();
-            System.exit(0);
+            MainMenu.player = FileManager.initPlayer(MainMenu.player.getName());
+            Stage stage = (Stage) barn.getScene().getWindow();
+            clock.stop();
+            stage.close();
+            int levelPrize = switch (level.status) {
+                case "Golden" -> level.goldenGiftCoin;
+                case "Silver" -> level.silverGiftCoin;
+                case "Bronze" -> level.bronzeGiftCoin;
+                default -> 0;
+            };
+            MainMenu.player.setCoins(MainMenu.player.getCoins()+levelPrize);
+            if (level.levelNum == MainMenu.player.getLevel())
+                MainMenu.player.setLevel(MainMenu.player.getLevel()+1);
+            FinishLevel.time = level.time.n;
+            FinishLevel.gift = levelPrize;
+            FinishLevel.status = level.status;
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("finishLevel.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("Finish");
+            primaryStage.setScene(new Scene(root, 600, 370));
+            primaryStage.show();
         }
     }
 

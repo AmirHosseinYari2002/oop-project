@@ -59,7 +59,6 @@ public class SignIn {
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Main Menu");
             primaryStage.setScene(new Scene(root, 1550, 800));
-            //GUI.playSound(new File("src\\pictures\\Farmville.wav"));
             primaryStage.show();
         }
     }
