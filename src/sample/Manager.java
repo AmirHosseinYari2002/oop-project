@@ -517,8 +517,8 @@ public class Manager {
                     Product product = workShop.producing();
                     product.setStartDisappearTime(level.time);
                     productsList.add(product);
-                    product.image.setX(300);
-                    product.image.setY(300);
+                    product.image.setX(random.nextInt(mapWidth)+distanceMapAndPageWidth);
+                    product.image.setY(random.nextInt(mapHeight)+distanceMapAndPageHeight);
                     product.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent event) {
@@ -526,8 +526,9 @@ public class Manager {
 
                         }
                     });
-                    pane.getChildren().addAll(product.image);
                     product.setStartDisappearTime(level.time);
+                    if (!pane.getChildren().contains(product.image))
+                        pane.getChildren().addAll(product.image);
                 }
                 workShop.setStartTime(new TIME(0));
                 return workShop.name;

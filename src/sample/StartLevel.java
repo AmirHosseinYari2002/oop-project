@@ -398,6 +398,7 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Buffalo");
         if (manageError != null){
             manageError.image.setVisible(true);
+            GUI.playSound(new File("src\\sample\\pictures\\buffalo.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
 
@@ -412,6 +413,7 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Cat");
         if (manageError != null){
             manageError.image.setVisible(true);
+            GUI.playSound(new File("src\\sample\\pictures\\Cat.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy cat");
 
@@ -426,6 +428,7 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Hen");
         if (manageError != null){
             manageError.image.setVisible(true);
+            GUI.playSound(new File("src\\sample\\pictures\\hen.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
 
@@ -440,6 +443,7 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Hound");
         if (manageError != null){
             manageError.image.setVisible(true);
+            GUI.playSound(new File("src\\sample\\pictures\\Dog.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hound");
 
@@ -454,6 +458,7 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Turkey");
         if (manageError != null){
             manageError.image.setVisible(true);
+            GUI.playSound(new File("src\\sample\\pictures\\Turkey.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");
 

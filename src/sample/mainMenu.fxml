@@ -58,7 +58,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Rectangle arcHeight="100.0" arcWidth="100.0" height="528.0" layoutX="213.0" layoutY="191.0" opacity="0.84" scaleX="0.85" scaleY="0.85" stroke="BLACK" strokeType="INSIDE" width="393.0">
+      <Rectangle arcHeight="100.0" arcWidth="100.0" height="528.0" layoutX="213.0" layoutY="257.0" opacity="0.84" scaleX="0.85" scaleY="0.85" stroke="BLACK" strokeType="INSIDE" width="393.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -76,82 +76,82 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <ImageView fx:id="Levels" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="235.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+      <ImageView fx:id="Levels" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="301.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
          <image>
             <Image url="@../sample/pictures/loadtitle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="Help" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="320.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+      <ImageView fx:id="Help" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="386.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
          <image>
             <Image url="@../sample/pictures/loadtitle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="profile" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="414.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+      <ImageView fx:id="profile" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="477.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
          <image>
             <Image url="@../sample/pictures/loadtitle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="signOut" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="505.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+      <ImageView fx:id="signOut" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="571.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
          <image>
             <Image url="@../sample/pictures/loadtitle.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="exit" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="592.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+      <ImageView fx:id="exit" fitHeight="150.0" fitWidth="200.0" layoutX="359.0" layoutY="658.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
          <image>
             <Image url="@../sample/pictures/loadtitle.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="415.0" layoutY="251.0" prefHeight="46.0" prefWidth="88.0" text="Levels">
+      <Label alignment="CENTER" layoutX="415.0" layoutY="317.0" prefHeight="46.0" prefWidth="88.0" text="Levels">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="415.0" layoutY="609.0" onMouseClicked="#showExit" prefHeight="46.0" prefWidth="88.0" text="Exit">
+      <Label alignment="CENTER" layoutX="415.0" layoutY="675.0" onMouseClicked="#showExit" prefHeight="46.0" prefWidth="88.0" text="Exit">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="409.0" layoutY="521.0" onMouseClicked="#showSignOut" prefHeight="48.0" prefWidth="98.0" text="Sign out">
+      <Label alignment="CENTER" layoutX="409.0" layoutY="587.0" onMouseClicked="#showSignOut" prefHeight="48.0" prefWidth="98.0" text="Sign out">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="391.0" layoutY="426.0" onMouseClicked="#showProfile" prefHeight="55.0" prefWidth="135.0" text="Edit Profile">
+      <Label alignment="CENTER" layoutX="391.0" layoutY="492.0" onMouseClicked="#showProfile" prefHeight="55.0" prefWidth="135.0" text="Edit Profile">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="415.0" layoutY="337.0" onMouseClicked="#showHelp" prefHeight="46.0" prefWidth="88.0" text="Help">
+      <Label alignment="CENTER" layoutX="415.0" layoutY="403.0" onMouseClicked="#showHelp" prefHeight="46.0" prefWidth="88.0" text="Help">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <ImageView fx:id="exitImg" fitHeight="62.0" fitWidth="65.0" layoutX="292.0" layoutY="607.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+      <ImageView fx:id="exitImg" fitHeight="62.0" fitWidth="65.0" layoutX="271.0" layoutY="673.0" onMouseClicked="#showExit" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
          <image>
             <Image url="@../sample/pictures/exit.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="signOutImg" fitHeight="80.0" fitWidth="88.0" layoutX="283.0" layoutY="513.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+      <ImageView fx:id="signOutImg" fitHeight="80.0" fitWidth="88.0" layoutX="262.0" layoutY="579.0" onMouseClicked="#showSignOut" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
          <image>
             <Image url="@../sample/pictures/SignOut.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="editPrfImg" fitHeight="80.0" fitWidth="80.0" layoutX="283.0" layoutY="418.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+      <ImageView fx:id="editPrfImg" fitHeight="80.0" fitWidth="80.0" layoutX="262.0" layoutY="484.0" onMouseClicked="#showProfile" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
          <image>
             <Image url="@../sample/pictures/edit.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="helpImg" fitHeight="80.0" fitWidth="80.0" layoutX="283.0" layoutY="329.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+      <ImageView fx:id="helpImg" fitHeight="80.0" fitWidth="80.0" layoutX="262.0" layoutY="395.0" onMouseClicked="#showHelp" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
          <image>
             <Image url="@../sample/pictures/option2.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="levelsImg" fitHeight="106.0" fitWidth="80.0" layoutX="283.0" layoutY="238.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
+      <ImageView fx:id="levelsImg" fitHeight="106.0" fitWidth="80.0" layoutX="262.0" layoutY="304.0" onMouseClicked="#showLevels" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7">
          <image>
             <Image url="@../sample/pictures/levels.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="76.0" layoutX="234.0" layoutY="690.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="352.0">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="76.0" layoutX="242.0" layoutY="209.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="334.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -169,12 +169,12 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Label fx:id="date" alignment="CENTER" layoutX="320.0" layoutY="701.0" prefHeight="30.0" prefWidth="238.0" text="Date: ">
+      <Label fx:id="date" alignment="CENTER" layoutX="325.0" layoutY="220.0" prefHeight="30.0" prefWidth="238.0" text="Date: ">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="time" alignment="CENTER" layoutX="315.0" layoutY="733.0" prefHeight="30.0" prefWidth="261.0" text="Time:">
+      <Label fx:id="time" alignment="CENTER" layoutX="320.0" layoutY="252.0" prefHeight="30.0" prefWidth="261.0" text="Time:">
          <font>
             <Font size="20.0" />
          </font>
@@ -297,7 +297,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="245.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="272.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/Sharif.gif" />
          </image>
