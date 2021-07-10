@@ -8,13 +8,14 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class PauseMenu {
 
-//    StartLevel startLevel = new StartLevel();
+    public static AnchorPane pane;
 
     @FXML
     private ImageView resumeBtn;
@@ -24,6 +25,13 @@ public class PauseMenu {
 
     @FXML
     private ImageView exitBtn;
+
+    @FXML
+    void initialize(){
+        GUI.addLabelGUI(restartBtn);
+        GUI.addLabelGUI(restartBtn);
+        GUI.addLabelGUI(exitBtn);
+    }
 
     @FXML
     void exit(MouseEvent event) {
@@ -40,10 +48,11 @@ public class PauseMenu {
 
     @FXML
     void restart(MouseEvent event) {
+        StartLevel.moveThread.stop();
         Stage stage = (Stage) restartBtn.getScene().getWindow();
         stage.close();
-//        Stage stage1 = (Stage) startLevel.groundBack.getScene().getWindow();
-//        stage1.close();
+        Stage stage1 = (Stage) pane.getScene().getWindow();
+        stage1.close();
         StartLevel.level = new Levels(StartLevel.level.levelNum);
         StartLevel.manager = new Manager(StartLevel.level,MainMenu.player);
         Parent root = null;
@@ -68,10 +77,11 @@ public class PauseMenu {
 
     @FXML
     void mainMenu(MouseEvent event) {
+        StartLevel.moveThread.stop();
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
-//        Stage stage1 = (Stage) startLevel.groundBack.getScene().getWindow();
-//        stage1.close();
+        Stage stage1 = (Stage) pane.getScene().getWindow();
+        stage1.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));

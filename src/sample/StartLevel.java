@@ -32,6 +32,8 @@ public class StartLevel {
 
     public static Timeline clock;
 
+    public static Thread moveThread;
+
     private static final ArrayList<ImageView> workshopBuildBtn = new ArrayList<>();
 
     private static final ArrayList<ImageView> workshopUpgradeBtn = new ArrayList<>();
@@ -152,6 +154,9 @@ public class StartLevel {
     public ImageView groundBack;
 
     @FXML
+    private ImageView pauseBtn;
+
+    @FXML
     void plantGrass(MouseEvent event) throws FileNotFoundException {
         ImageView imageView = manager.planting((int) event.getX() ,(int) event.getY());
         if (imageView != null){
@@ -214,6 +219,7 @@ public class StartLevel {
 
     @FXML
     public void initialize(){
+        GUI.addLabelGUI(pauseBtn);
         GUI.addLabelGUI(barn);
         GUI.addLabelGUI(well);
         GUI.addLabelGUI(truck);
@@ -349,7 +355,7 @@ public class StartLevel {
                 }
             });
         }
-        Thread moveThread = new Thread() {
+        moveThread = new Thread() {
             public void run() {
                 try {
                     for(;;) {
@@ -524,6 +530,7 @@ public class StartLevel {
     @FXML
     void pause(MouseEvent event) {
         try {
+            PauseMenu.pane = ground;
             clock.pause();
             Parent root = FXMLLoader.load(getClass().getResource("pauseMenu.fxml"));
             Stage primaryStage = new Stage();

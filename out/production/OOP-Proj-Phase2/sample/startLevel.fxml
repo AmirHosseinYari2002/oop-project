@@ -211,7 +211,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="61.0" fitWidth="74.0" layoutX="18.0" layoutY="20.0" onMouseClicked="#pause" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pauseBtn" fitHeight="61.0" fitWidth="74.0" layoutX="18.0" layoutY="20.0" onMouseClicked="#pause" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pictures/pause.png" />
          </image>
