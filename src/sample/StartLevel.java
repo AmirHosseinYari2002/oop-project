@@ -440,7 +440,7 @@ public class StartLevel {
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
 
-        }else if (manageError.equals("Coins")){
+        }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy buffalo");
         }
@@ -455,7 +455,7 @@ public class StartLevel {
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy cat");
 
-        }else if (manageError.equals("Coins")){
+        }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy cat");
         }
@@ -475,7 +475,7 @@ public class StartLevel {
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
 
-        }else if (manageError.equals("Coins")){
+        }else {
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hen");
         }
@@ -490,7 +490,7 @@ public class StartLevel {
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hound");
 
-        }else if (manageError.equals("Coins")){
+        }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hound");
         }
@@ -510,7 +510,7 @@ public class StartLevel {
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");
 
-        }else if (manageError.equals("Coins")){
+        }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy turkey");
         }

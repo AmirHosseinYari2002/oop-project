@@ -88,6 +88,9 @@ public class ShowTruck {
         for (Map.Entry<Product, Integer> entry : StartLevel.manager.getProductsInBarn().entrySet()){
             products.add(entry.getKey().getName());
         }
+        for (Map.Entry<Animal, Integer> entry : StartLevel.manager.getAnimalInBarn().entrySet()){
+            products.add(entry.getKey().name);
+        }
         ObservableList<String> names = FXCollections.observableArrayList(products);
         productComboBox.getItems().addAll(names);
     }

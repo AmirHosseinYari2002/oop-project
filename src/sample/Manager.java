@@ -702,6 +702,7 @@ public class Manager {
         if (Car.getInstance().getStartTrip() == null)
             return -1;
         if (Car.getInstance().IsCarBack(level.time)){
+            Car.getInstance().setStartTrip(null);
             Car.getInstance().isTraveling = false;
             Car.getInstance().setEmptySpace(15);
             int sellPrice = 0;

@@ -1243,3 +1243,89 @@ Sat Jul 10 10:34:30 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 10 10:34:37 IRDT 2021 [ERROR] buy turkey
 Sat Jul 10 10:34:47 IRDT 2021 [INFO] Workshop start working
 Sat Jul 10 10:35:02 IRDT 2021 [INFO] Workshop start working
+Sat Jul 10 10:36:34 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 10 10:36:42 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 10:36:53 IRDT 2021 [INFO] egg reach the desired amount.
+Sat Jul 10 16:38:10 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 10 16:38:15 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:22 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:35 IRDT 2021 [INFO] egg reach the desired amount.
+Sat Jul 10 16:38:44 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:45 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:45 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:45 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:46 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:46 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:46 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:47 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:47 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:48 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:48 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:48 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:48 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:48 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:49 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:49 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:49 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:49 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:49 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:50 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:50 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:50 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:50 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:50 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:51 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:51 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:51 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:51 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:52 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:52 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:52 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:52 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:38:53 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:53 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:54 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:54 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:54 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:54 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:54 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:55 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:56 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:56 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:56 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:56 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:56 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:57 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:57 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:57 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:57 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:57 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:58 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:58 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:58 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:58 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:58 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:59 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:59 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:59 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:38:59 IRDT 2021 [ERROR] buy hen
+Sat Jul 10 16:39:00 IRDT 2021 [ERROR] buy cat
+Sat Jul 10 16:39:00 IRDT 2021 [ERROR] buy cat
+Sat Jul 10 16:39:00 IRDT 2021 [ERROR] buy cat
+Sat Jul 10 16:39:01 IRDT 2021 [ERROR] buy cat
+Sat Jul 10 16:39:01 IRDT 2021 [ERROR] buy cat
+Sat Jul 10 16:39:01 IRDT 2021 [INFO] egg reach the desired amount.
+Sat Jul 10 16:39:19 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:39:19 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:39:46 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 10 16:39:50 IRDT 2021 [ERROR] buy turkey
+Sat Jul 10 16:39:55 IRDT 2021 [ERROR] buy hound
+Sat Jul 10 16:39:56 IRDT 2021 [ERROR] buy turkey
+Sat Jul 10 16:40:52 IRDT 2021 [INFO] Workshop start working
+Sat Jul 10 16:40:54 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sat Jul 10 16:41:07 IRDT 2021 [ERROR] do not have the raw materials to produce the product
