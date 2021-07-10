@@ -30,7 +30,7 @@ public class StartLevel {
 
     public static Manager manager;
 
-    private static Timeline clock;
+    public static Timeline clock;
 
     private static final ArrayList<ImageView> workshopBuildBtn = new ArrayList<>();
 
@@ -363,7 +363,6 @@ public class StartLevel {
     void update() throws FileNotFoundException {
         coinLbl.setText("Coins: "+MainMenu.player.getCoins());
         level.time.n++;
-        //manager.move();
         manager.eatGrass(ground);
         manager.reduceLife(ground);
         manager.isAnimalManufacturedProduct(ground);
@@ -431,6 +430,12 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Buffalo");
         if (manageError != null){
             manageError.image.setVisible(true);
+            manageError.lifeProgBar.setProgress(1);
+            manageError.lifeProgBar.setPrefSize(50,10);
+            manageError.lifeProgBar.setLayoutX(manageError.image.getX());
+            manageError.lifeProgBar.setLayoutY(manageError.image.getY()+50
+            );
+            ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\buffalo.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
@@ -461,6 +466,11 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Hen");
         if (manageError != null){
             manageError.image.setVisible(true);
+            manageError.lifeProgBar.setProgress(1);
+            manageError.lifeProgBar.setPrefSize(50,10);
+            manageError.lifeProgBar.setLayoutX(manageError.image.getX());
+            manageError.lifeProgBar.setLayoutY(manageError.image.getY()+manageError.image.getFitHeight());
+            ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\hen.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
@@ -491,6 +501,11 @@ public class StartLevel {
         Animal manageError = manager.buyAnimal("Turkey");
         if (manageError != null){
             manageError.image.setVisible(true);
+            manageError.lifeProgBar.setProgress(1);
+            manageError.lifeProgBar.setPrefSize(50,10);
+            manageError.lifeProgBar.setLayoutX(manageError.image.getX());
+            manageError.lifeProgBar.setLayoutY(manageError.image.getY()+manageError.image.getFitHeight());
+            ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\Turkey.wav")).start();
             ground.getChildren().addAll(manageError.image);
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");

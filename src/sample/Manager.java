@@ -99,32 +99,38 @@ public class Manager {
                 if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getX() > domesticAnimal.X) {
                     domesticAnimal.X++;
                     domesticAnimal.image.setX(domesticAnimal.X);
+                    domesticAnimal.lifeProgBar.setLayoutX(domesticAnimal.X);
                 } else if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getX() < domesticAnimal.X) {
                     domesticAnimal.X--;
                     domesticAnimal.image.setX(domesticAnimal.X);
+                    domesticAnimal.lifeProgBar.setLayoutX(domesticAnimal.X);
                 } else {
                     if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getY() > domesticAnimal.Y) {
                         domesticAnimal.Y++;
                         domesticAnimal.image.setY(domesticAnimal.Y);
+                        domesticAnimal.lifeProgBar.setLayoutY(domesticAnimal.Y);
                     } else if (shortestDistanceToEatGrass(domesticAnimal.X, domesticAnimal.Y).getY() < domesticAnimal.Y) {
                         domesticAnimal.Y--;
                         domesticAnimal.image.setY(domesticAnimal.Y);
+                        domesticAnimal.lifeProgBar.setLayoutY(domesticAnimal.Y);
                     }
                 }
             }else {
                 int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (domesticAnimal.X == mapWidth){
+                    if (domesticAnimal.X >= mapWidth){
                         a = -a;
                     }
                     domesticAnimal.X += a;
                     domesticAnimal.image.setX(domesticAnimal.X);
+                    domesticAnimal.lifeProgBar.setLayoutX(domesticAnimal.X);
                 }else {
-                    if (domesticAnimal.Y == mapHeight){
+                    if (domesticAnimal.Y >= mapHeight){
                         a = -a;
                     }
                     domesticAnimal.Y += a;
                     domesticAnimal.image.setY(domesticAnimal.Y);
+                    domesticAnimal.lifeProgBar.setLayoutY(domesticAnimal.Y);
                 }
             }
         }
@@ -200,6 +206,7 @@ public class Manager {
             for (Grass grass : grassesList) {
                 if (grass.getImg().getBoundsInParent().intersects(domesticAnimal.image.getBoundsInParent())  &&  domesticAnimal.remainingLife <= 50){
                     domesticAnimal.remainingLife = 100;
+                    domesticAnimal.lifeProgBar.setProgress(1);
                     removeGrassList.add(grass);
                 }
             }
@@ -213,10 +220,12 @@ public class Manager {
     }
     public void reduceLife(AnchorPane pane){
         for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
-            domesticAnimal.remainingLife -= 1;
+            domesticAnimal.remainingLife -= 5;
+            domesticAnimal.lifeProgBar.setProgress(domesticAnimal.remainingLife/100.0);
             if (domesticAnimal.remainingLife <= 0){
                 removeAnimalList.add(domesticAnimal);
                 pane.getChildren().remove(domesticAnimal.image);
+                pane.getChildren().remove(domesticAnimal.lifeProgBar);
             }
         }
         for (Animal animal : removeAnimalList) {
@@ -231,6 +240,7 @@ public class Manager {
                 if (wildAnimal.image.getBoundsInParent().intersects(domesticAnimal.image.getBoundsInParent())){
                     removeAnimalList.add(domesticAnimal);
                     pane.getChildren().remove(domesticAnimal.image);
+                    pane.getChildren().remove(domesticAnimal.lifeProgBar);
                 }
             }
             for (Product product : productsList) {
