@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="415.0" style="-fx-background-color: #FFE4B5;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PauseMenu">
+   <children>
+      <ImageView fitHeight="556.0" fitWidth="417.0">
+         <image>
+            <Image url="@pictures/pauseMenu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="resumeBtn" fitHeight="80.0" fitWidth="236.0" layoutX="88.0" layoutY="186.0" onMouseClicked="#resume" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="restartBtn" fitHeight="80.0" fitWidth="236.0" layoutX="91.0" layoutY="285.0" onMouseClicked="#restart" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="exitBtn" fitHeight="80.0" fitWidth="236.0" layoutX="88.0" layoutY="397.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="16.0" layoutY="23.0" onMouseClicked="#mainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/main-menu.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

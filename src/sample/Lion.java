@@ -21,5 +21,8 @@ public class Lion extends WildAnimal{
         this.image = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\lion.png")));
         this.image.setFitHeight(80);
         this.image.setFitWidth(80);
+        this.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage1.png")));
+        this.cage.setX(100);
+        this.cage.setY(100);
     }
 }

@@ -149,7 +149,7 @@ public class StartLevel {
     private AnchorPane ground;
 
     @FXML
-    private ImageView groundBack;
+    public ImageView groundBack;
 
     @FXML
     void plantGrass(MouseEvent event) throws FileNotFoundException {
@@ -157,12 +157,15 @@ public class StartLevel {
         if (imageView != null){
             if (imageView.getFitHeight() == 50  &&  imageView.getFitWidth() == 80){
                 GUI.createAlert(Alert.AlertType.ERROR,"ERROR","There is grass in this location");
+                FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"There is grass in this location");
             }else {
                 imageView.setVisible(true);
                 ground.getChildren().addAll(imageView);
+                FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Grass planted");
             }
         }else {
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket is empty!");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Bucket is empty!");
         }
     }
 
@@ -370,6 +373,8 @@ public class StartLevel {
         manager.appearWildAnimal(ground);
         manager.disappearProduct(ground);
         manager.destroyWildAnimal(ground);
+        if (level.time.n % 3 == 0)
+        manager.decreaseCageLevel(ground);
         manager.destroyDomesticAnimalAndProduct(ground);
         int sellProducts = manager.sellProducts();
         if (sellProducts != -1 && sellProducts != 0)
@@ -513,6 +518,20 @@ public class StartLevel {
         }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
             FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy turkey");
+        }
+    }
+
+    @FXML
+    void pause(MouseEvent event) {
+        try {
+            clock.pause();
+            Parent root = FXMLLoader.load(getClass().getResource("pauseMenu.fxml"));
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("Pause");
+            primaryStage.setScene(new Scene(root, 415, 556));
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -185,19 +185,21 @@ public class Manager {
             }
         }
         for (WildAnimal wildAnimal : wildAnimalsList) {
-            int a = 1;
-            if (random.nextInt(2) == 0){
-                if (wildAnimal.X >= mapWidth){
-                    a = -a;
+            if (wildAnimal.cageLevel == 0) {
+                int a = 1;
+                if (random.nextInt(2) == 0) {
+                    if (wildAnimal.X >= mapWidth) {
+                        a = -a;
+                    }
+                    wildAnimal.X += a;
+                    wildAnimal.image.setX(wildAnimal.X);
+                } else {
+                    if (wildAnimal.Y >= mapHeight) {
+                        a = -a;
+                    }
+                    wildAnimal.Y += a;
+                    wildAnimal.image.setY(wildAnimal.Y);
                 }
-                wildAnimal.X += a;
-                wildAnimal.image.setX(wildAnimal.X);
-            }else {
-                if (wildAnimal.Y >= mapHeight){
-                    a = -a;
-                }
-                wildAnimal.Y += a;
-                wildAnimal.image.setY(wildAnimal.Y);
             }
         }
     }
@@ -239,14 +241,11 @@ public class Manager {
             for (DomesticAnimal domesticAnimal : domesticAnimalsList) {
                 if (wildAnimal.image.getBoundsInParent().intersects(domesticAnimal.image.getBoundsInParent())){
                     removeAnimalList.add(domesticAnimal);
-                    pane.getChildren().remove(domesticAnimal.image);
-                    pane.getChildren().remove(domesticAnimal.lifeProgBar);
                 }
             }
             for (Product product : productsList) {
                 if (wildAnimal.image.getBoundsInParent().intersects(product.image.getBoundsInParent())){
                     removeProductList.add(product);
-                    pane.getChildren().remove(product.image);
                 }
             }
         }
@@ -257,12 +256,17 @@ public class Manager {
             }
         }
         for (Product product : removeProductList) {
-            if (productsList.contains(product))
+            if (productsList.contains(product)) {
                 productsList.remove(product);
+                pane.getChildren().remove(product.image);
+            }
         }
         for (Animal animal : removeAnimalList) {
-            if (domesticAnimalsList.contains(animal))
+            if (domesticAnimalsList.contains(animal)) {
                 domesticAnimalsList.remove(animal);
+                pane.getChildren().remove(animal.image);
+                pane.getChildren().remove(animal.lifeProgBar);
+            }
         }
     }
     public void destroyWildAnimal(AnchorPane pane){
@@ -555,14 +559,24 @@ public class Manager {
         }
         return "notReady";
     }
-    public int cage(int x, int y){
+    public int cage(int x, int y, AnchorPane pane) throws FileNotFoundException {
         for (WildAnimal wildAnimal : wildAnimalsList) {
             if (wildAnimal.X == x  &&  wildAnimal.Y == y){
-                wildAnimal.cageLevel++;
+                if (wildAnimal.cageLevel != wildAnimal.cageLevelRequired) {
+                    pane.getChildren().remove(wildAnimal.cage);
+                    wildAnimal.cageLevel++;
+                    wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage" + wildAnimal.cageLevel + ".png")));
+                    wildAnimal.cage.setX(wildAnimal.X - 20);
+                    wildAnimal.cage.setY(wildAnimal.Y - 50);
+                    wildAnimal.cage.setVisible(true);
+                }
+                pane.getChildren().addAll(wildAnimal.cage);
                 if (wildAnimal.cageLevel == wildAnimal.cageLevelRequired){
                     if (Barn.getInstance().getFreeSpace() >= wildAnimal.OccupiedSpace){
                         animalInBarn.put(wildAnimal,1);
                         Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace() - wildAnimal.OccupiedSpace);
+                        pane.getChildren().remove(wildAnimal.image);
+                        pane.getChildren().remove(wildAnimal.cage);
                     }
                     removeAnimalList.add(wildAnimal);
                 }
@@ -816,6 +830,16 @@ public class Manager {
                         tiger.image.setY(tiger.Y);
                         tiger.image.setVisible(true);
                         GUI.playSound(new File("src\\sample\\pictures\\Tiger.wav")).start();
+                        tiger.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                try {
+                                    cage(tiger.X,tiger.Y,ground);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
                         ground.getChildren().addAll(tiger.image);
                     }
                     case "Lion" ->{
@@ -825,6 +849,16 @@ public class Manager {
                         lion.image.setY(lion.Y);
                         lion.image.setVisible(true);
                         GUI.playSound(new File("src\\sample\\pictures\\Lion.wav")).start();
+                        lion.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                try {
+                                    cage(lion.X,lion.Y,ground);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
                         ground.getChildren().addAll(lion.image);
                     }
                     case "Bear" ->{
@@ -834,17 +868,33 @@ public class Manager {
                         bear.image.setY(bear.Y);
                         bear.image.setVisible(true);
                         GUI.playSound(new File("src\\sample\\pictures\\Tiger.wav")).start();
+                        bear.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                try {
+                                    cage(bear.X,bear.Y,ground);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
                         ground.getChildren().addAll(bear.image);
                     }
                 }
             }
         }
     }
-    public void decreaseCageLevel(){
+    public void decreaseCageLevel(AnchorPane pane) throws FileNotFoundException {
         for (WildAnimal wildAnimal : wildAnimalsList) {
             if (wildAnimal.useCageOrder){
                 if (!wildAnimal.decreaseCageLevel){
+                    pane.getChildren().remove(wildAnimal.cage);
                     wildAnimal.cageLevel--;
+                    wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage"+wildAnimal.cageLevel+".png")));
+                    wildAnimal.cage.setX(wildAnimal.X-20);
+                    wildAnimal.cage.setY(wildAnimal.Y-50);
+                    wildAnimal.cage.setVisible(true);
+                    pane.getChildren().addAll(wildAnimal.cage);
                 }
             }
             wildAnimal.decreaseCageLevel = false;

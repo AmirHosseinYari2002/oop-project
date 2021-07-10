@@ -79,14 +79,14 @@ public class InputProcessor {
         }
     }
     private void processCage(String[] split){
-        int manageError = manager.cage(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
-        if (manageError == -1) {
-            System.err.println("There is no wild animal in this place !");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The cage order location is incorrect");
-        }else {
-            System.out.println(ANSI_GREEN + "Cage level increased\nnew cage level : " + manageError + ANSI_YELLOW + "\nWARNING! You must use the cage command in the next time units to be completely imprisoned, otherwise the level of the cage will decrease.");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Cage level increased");
-        }
+//        int manageError = manager.cage(Integer.parseInt(split[1]),Integer.parseInt(split[2]));
+//        if (manageError == -1) {
+//            System.err.println("There is no wild animal in this place !");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The cage order location is incorrect");
+//        }else {
+//            System.out.println(ANSI_GREEN + "Cage level increased\nnew cage level : " + manageError + ANSI_YELLOW + "\nWARNING! You must use the cage command in the next time units to be completely imprisoned, otherwise the level of the cage will decrease.");
+//            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Cage level increased");
+//        }
     }
     private void processGoingForwardTime(String[] split) throws FileNotFoundException {
         for (int i = 0; i < Integer.parseInt(split[1]); i++) {
@@ -181,7 +181,7 @@ public class InputProcessor {
         //manager.destroyWildAnimal();
         //manager.disappearProduct();
         //manager.appearWildAnimal();
-        manager.decreaseCageLevel();
+        //manager.decreaseCageLevel();
         //manager.isAnimalManufacturedProduct();
         int sellProducts = manager.sellProducts();
         if (sellProducts != -1 && sellProducts != 0)
