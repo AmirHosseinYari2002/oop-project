@@ -169,6 +169,7 @@ public class MainMenu {
                     System.out.println(finalI1);
                     StartLevel.level = new Levels(finalI1 +1);
                     StartLevel.manager = new Manager(StartLevel.level,player);
+                    StartLevel.level.initialMoney = player.getCoins();
                     Stage stage = (Stage) level1Btn.getScene().getWindow();
                     stage.close();
                     Parent root = null;

@@ -900,6 +900,8 @@ public class Manager {
                         pane.getChildren().addAll(wildAnimal.breakCage);
                     }else if (wildAnimal.cageLevel > 0){
                         wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage" + wildAnimal.cageLevel + ".png")));
+                        wildAnimal.cage.setX(wildAnimal.X-20);
+                        wildAnimal.cage.setY(wildAnimal.Y-50);
                         wildAnimal.cage.setVisible(true);
                         pane.getChildren().addAll(wildAnimal.cage);
                     }

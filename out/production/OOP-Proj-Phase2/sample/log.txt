@@ -1059,3 +1059,54 @@ Sun Jul 11 13:03:57 IRDT 2021 [ERROR] Grass planted
 Sun Jul 11 13:04:01 IRDT 2021 [ERROR] buy hen
 Sun Jul 11 13:04:02 IRDT 2021 [ERROR] buy hen
 Sun Jul 11 13:04:02 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:05:23 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 13:05:27 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:05:28 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:05:28 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:05:29 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:05:30 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:05:30 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:05:34 IRDT 2021 [INFO] egg reach the desired amount.
+Sun Jul 11 13:06:00 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:06:02 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:45:56 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 15:49:49 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 15:49:55 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:49:57 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:49:59 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:50:02 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:50:21 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 15:50:23 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:50:28 IRDT 2021 [ERROR] buy hound
+Sun Jul 11 15:50:32 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 15:50:38 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:50:45 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:51:07 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 15:51:21 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:51:23 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:51:28 IRDT 2021 [INFO] egg reach the desired amount.
+Sun Jul 11 15:51:41 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 15:51:44 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:51:46 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 15:51:51 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:52:38 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:52:42 IRDT 2021 [ERROR] Bucket is empty!
+Sun Jul 11 15:52:44 IRDT 2021 [INFO] The bucket of water was filled
+Sun Jul 11 15:52:45 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:52:47 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:52:53 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:52:54 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 15:53:08 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:53:31 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:53:32 IRDT 2021 [INFO] Turkey reach the desired amount.
+Sun Jul 11 15:53:38 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 15:53:39 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 15:53:43 IRDT 2021 [INFO] feather reach the desired amount.
+Sun Jul 11 15:54:13 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 16:09:17 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 16:09:24 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 16:09:24 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 16:09:40 IRDT 2021 [ERROR] don't have enough coins to buy hen
+Sun Jul 11 16:10:58 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 16:11:05 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 16:11:09 IRDT 2021 [ERROR] buy buffalo

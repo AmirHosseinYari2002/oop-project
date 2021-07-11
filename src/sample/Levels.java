@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Levels {
     String status;
+    int initialMoney;
     int levelNum;
     File levelFile = new File("src\\sample\\missions.txt");
     TIME time = new TIME(0);

@@ -42,6 +42,7 @@ public class PauseMenu {
         alert.showAndWait();
         Stage stage =(Stage) exitBtn.getScene().getWindow();
         if (alert.getResult() == ButtonType.OK) {
+            MainMenu.player.setCoins(StartLevel.level.initialMoney);
             System.exit(0);
         }
     }
@@ -57,6 +58,7 @@ public class PauseMenu {
         stage.close();
         Stage stage1 = (Stage) pane.getScene().getWindow();
         stage1.close();
+        MainMenu.player.setCoins(StartLevel.level.initialMoney);
         StartLevel.level = new Levels(StartLevel.level.levelNum);
         StartLevel.manager = new Manager(StartLevel.level,MainMenu.player);
         Parent root = null;
@@ -81,6 +83,7 @@ public class PauseMenu {
 
     @FXML
     void mainMenu(MouseEvent event) {
+        MainMenu.player.setCoins(StartLevel.level.initialMoney);
         StartLevel.workshopBuildBtn.clear();
         StartLevel.workshopBtn.clear();
         StartLevel.workshopUpgradeBtn.clear();
