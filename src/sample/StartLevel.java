@@ -34,13 +34,13 @@ public class StartLevel {
 
     public static Thread moveThread;
 
-    private static final ArrayList<ImageView> workshopBuildBtn = new ArrayList<>();
+    public static final ArrayList<ImageView> workshopBuildBtn = new ArrayList<>();
 
-    private static final ArrayList<ImageView> workshopUpgradeBtn = new ArrayList<>();
+    public static final ArrayList<ImageView> workshopUpgradeBtn = new ArrayList<>();
 
-    private static final ArrayList<ImageView> workshopBtn = new ArrayList<>();
+    public static final ArrayList<ImageView> workshopBtn = new ArrayList<>();
 
-    private static final ArrayList<Label> workshopBtnLbl = new ArrayList<>();
+    public static final ArrayList<Label> workshopBtnLbl = new ArrayList<>();
 
     @FXML
     private ImageView barn;
@@ -406,6 +406,10 @@ public class StartLevel {
             tasksLbl.setText(tasks);
         }
         if (manager.isLevelCompleted()){
+            workshopBuildBtn.clear();
+            workshopBtn.clear();
+            workshopUpgradeBtn.clear();
+            workshopBtnLbl.clear();
             GUI.playSound(new File("src\\sample\\pictures\\finish.wav")).start();
             MainMenu.player = FileManager.initPlayer(MainMenu.player.getName());
             Stage stage = (Stage) barn.getScene().getWindow();

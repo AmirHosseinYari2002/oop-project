@@ -48,6 +48,10 @@ public class PauseMenu {
 
     @FXML
     void restart(MouseEvent event) {
+        StartLevel.workshopBuildBtn.clear();
+        StartLevel.workshopBtn.clear();
+        StartLevel.workshopUpgradeBtn.clear();
+        StartLevel.workshopBtnLbl.clear();
         StartLevel.moveThread.stop();
         Stage stage = (Stage) restartBtn.getScene().getWindow();
         stage.close();
@@ -77,6 +81,10 @@ public class PauseMenu {
 
     @FXML
     void mainMenu(MouseEvent event) {
+        StartLevel.workshopBuildBtn.clear();
+        StartLevel.workshopBtn.clear();
+        StartLevel.workshopUpgradeBtn.clear();
+        StartLevel.workshopBtnLbl.clear();
         StartLevel.moveThread.stop();
         Stage stage = (Stage) exitBtn.getScene().getWindow();
         stage.close();
