@@ -1047,3 +1047,15 @@ Sun Jul 11 11:53:58 IRDT 2021 [INFO] Signed In successfully
 Sun Jul 11 11:54:18 IRDT 2021 [ERROR] do not have the raw materials to produce the product
 Sun Jul 11 11:54:23 IRDT 2021 [ERROR] Grass planted
 Sun Jul 11 11:54:25 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 12:18:55 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 13:03:10 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 13:03:49 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:03:50 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:03:50 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:03:51 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:03:52 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:03:56 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 13:03:57 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 13:04:01 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:04:02 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 13:04:02 IRDT 2021 [ERROR] buy hen

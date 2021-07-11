@@ -39,6 +39,10 @@ public class FinishLevel {
 
     @FXML
     void initialize(){
+        StartLevel.workshopBuildBtn.clear();
+        StartLevel.workshopBtn.clear();
+        StartLevel.workshopUpgradeBtn.clear();
+        StartLevel.workshopBtnLbl.clear();
         timeLbl.setText(timeLbl.getText()+" "+time);
         giftLbl.setText(giftLbl.getText()+" "+gift);
         switch (status){
