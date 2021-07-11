@@ -133,6 +133,9 @@ public class StartLevel {
     private ImageView upgradeWeaving;
 
     @FXML
+    private ImageView upgradeIncubator;
+
+    @FXML
     private ImageView upgradeSewing;
 
     @FXML
@@ -155,6 +158,15 @@ public class StartLevel {
 
     @FXML
     private ImageView pauseBtn;
+
+    @FXML
+    private ImageView incubatorWS;
+
+    @FXML
+    private ImageView incubatorBuildBtn;
+
+    @FXML
+    private Label BuildIncubatorLBL;
 
     @FXML
     void plantGrass(MouseEvent event) throws FileNotFoundException {
@@ -229,36 +241,41 @@ public class StartLevel {
         GUI.addLabelGUI(turkeyIcon);
         GUI.addLabelGUI(buffaloIcon);
         GUI.addLabelGUI(weavingWS);
+        GUI.addLabelGUI(incubatorWS);
         GUI.addLabelGUI(millWS);
         GUI.addLabelGUI(bakeryWS);
         GUI.addLabelGUI(iceCreamWS);
         GUI.addLabelGUI(milkWS);
         GUI.addLabelGUI(sewingWS);
         weavingWS.setVisible(false);
+        incubatorWS.setVisible(false);
         milkWS.setVisible(false);
         millWS.setVisible(false);
         iceCreamWS.setVisible(false);
         bakeryWS.setVisible(false);
         sewingWS.setVisible(false);
         workshopBtn.add(weavingWS);
+        workshopBtn.add(incubatorWS);
         workshopBtn.add(millWS);
         workshopBtn.add(bakeryWS);
         workshopBtn.add(iceCreamWS);
         workshopBtn.add(milkWS);
         workshopBtn.add(sewingWS);
         workshopBtnLbl.add(BuildWeavingLBL);
+        workshopBtnLbl.add(BuildIncubatorLBL);
         workshopBtnLbl.add(BuildMillLBL);
         workshopBtnLbl.add(BuildBakeryLBL);
         workshopBtnLbl.add(BuildIceCreamLBL);
         workshopBtnLbl.add(BuildMilkLBL);
         workshopBtnLbl.add(BuildSewingLBL);
         workshopUpgradeBtn.add(upgradeWeaving);
+        workshopUpgradeBtn.add(upgradeIncubator);
         workshopUpgradeBtn.add(upgradeMill);
         workshopUpgradeBtn.add(upgradeBakery);
         workshopUpgradeBtn.add(upgradeIceCream);
         workshopUpgradeBtn.add(upgradeMilk);
         workshopUpgradeBtn.add(upgradeSewing);
-        String[] WSBtnNames = new String[]{"weaving","mill","bakery","iceCreamSelling","milkPackaging","sewing"};
+        String[] WSBtnNames = new String[]{"weaving","incubator","mill","bakery","iceCreamSelling","milkPackaging","sewing"};
         for (ImageView imageView : workshopUpgradeBtn) {
             GUI.addLabelGUI(imageView);
             imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
@@ -302,6 +319,7 @@ public class StartLevel {
         }
         tasksLbl.setText(tasks);
         workshopBuildBtn.add(weavingBuildBtn);
+        workshopBuildBtn.add(incubatorBuildBtn);
         workshopBuildBtn.add(millBuildBtn);
         workshopBuildBtn.add(bakeryBuildBtn);
         workshopBuildBtn.add(iceCreamBuildBtn);

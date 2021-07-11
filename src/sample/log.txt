@@ -1117,3 +1117,62 @@ Sun Jul 11 16:12:49 IRDT 2021 [ERROR] buy turkey
 Sun Jul 11 16:12:50 IRDT 2021 [ERROR] buy hound
 Sun Jul 11 16:12:50 IRDT 2021 [ERROR] buy cat
 Sun Jul 11 16:12:51 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 17:08:01 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 17:08:22 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 17:09:01 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 17:09:01 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 17:59:41 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 17:59:56 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sun Jul 11 17:59:57 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 17:59:58 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 17:59:59 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:00:01 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:00:08 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:01:57 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:02:07 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:02:08 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:04:17 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:04:25 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:04:26 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:04:30 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:04:38 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:05:26 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:05:29 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:05:30 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:05:34 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:05:38 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:05:42 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:06:02 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:08:21 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:08:32 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:08:33 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:08:35 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:08:41 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:13:42 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:13:47 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:13:49 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:13:56 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:13:59 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:14:11 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:15:44 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:15:49 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:15:50 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:16:03 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:16:06 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:16:08 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:17:32 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:17:40 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:17:44 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:17:47 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:17:48 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:17:49 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 18:17:55 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 18:18:05 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:18:07 IRDT 2021 [INFO] egg reach the desired amount.
+Sun Jul 11 18:19:28 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:19:33 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:35 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:19:41 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:42 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:19:55 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:59 IRDT 2021 [ERROR] Grass planted

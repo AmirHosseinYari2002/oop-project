@@ -15,12 +15,12 @@
             <Image url="@../sample/pictures/background.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="barn" fitHeight="215.0" fitWidth="261.0" layoutX="142.0" layoutY="601.0" onMouseClicked="#showBarn" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="barn" fitHeight="215.0" fitWidth="261.0" layoutX="11.0" layoutY="601.0" onMouseClicked="#showBarn" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/Barn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="well" fitHeight="142.0" fitWidth="113.0" layoutX="517.0" layoutY="644.0" onMouseClicked="#fillWaterBucket" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="well" fitHeight="142.0" fitWidth="113.0" layoutX="580.0" layoutY="644.0" onMouseClicked="#fillWaterBucket" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/Well.png" />
          </image>
@@ -218,6 +218,31 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </ImageView>
+      <ImageView fx:id="incubatorWS" fitHeight="150.0" fitWidth="200.0" layoutX="265.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/incubator.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="incubatorBuildBtn" fitHeight="108.0" fitWidth="92.0" layoutX="410.0" layoutY="666.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/board.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="BuildIncubatorLBL" alignment="CENTER" layoutX="406.0" layoutY="671.0" prefHeight="30.0" prefWidth="98.0" text="Build incubator" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="upgradeMilk1" fitHeight="40.0" fitWidth="148.0" layoutX="1205.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upgradeIncubator" fitHeight="40.0" fitWidth="148.0" layoutX="403.0" layoutY="713.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pictures/update.png" />
+         </image>
       </ImageView>
    </children>
 </AnchorPane>

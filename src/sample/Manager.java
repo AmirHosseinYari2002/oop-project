@@ -425,6 +425,15 @@ public class Manager {
                 else
                     return "coins";
             }
+            case "incubator" -> {
+                if (player.getCoins() >= IncubatorWS.getInstance().getCost()){
+                    workShops.add(IncubatorWS.getInstance());
+                    player.setCoins(player.getCoins()-IncubatorWS.getInstance().getCost());
+                    stringBuilder.append("incubator").append(" ").append(IncubatorWS.getInstance().input.getName()).append(" ").append("hen");
+                }
+                else
+                    return "coins";
+            }
         }
         if (stringBuilder.length() != 0)
             return stringBuilder.toString();
@@ -496,7 +505,8 @@ public class Manager {
         }
         return null;
     }
-    public String startingWorkshop(String name){
+    public String
+    startingWorkshop(String name){
         for (WorkShop workShop : workShops) {
             if (workShop.name.equals(name)){
                 if (workShop.isWorking){
@@ -538,21 +548,42 @@ public class Manager {
             if (workShop.isProductReady(level.time)){
                 workShop.isWorking = false;
                 for (int i = 0; i < workShop.level; i++) {
-                    Product product = workShop.producing();
-                    product.setStartDisappearTime(level.time);
-                    productsList.add(product);
-                    product.image.setX(random.nextInt(mapWidth)+distanceMapAndPageWidth);
-                    product.image.setY(random.nextInt(mapHeight)+distanceMapAndPageHeight);
-                    product.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                        @Override
-                        public void handle(MouseEvent event) {
-                            pickupProduct(product.getX(),product.getY(),pane);
-
+                    if (workShop.name.equals("incubator")){
+                        Hen hen = null;
+                        try {
+                            hen = new Hen(random.nextInt(mapWidth)+distanceMapAndPageWidth,random.nextInt(mapHeight)+distanceMapAndPageHeight);
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
                         }
-                    });
-                    product.setStartDisappearTime(level.time);
-                    if (!pane.getChildren().contains(product.image))
-                        pane.getChildren().addAll(product.image);
+                        player.setCoins(player.getCoins()-hen.price);
+                        domesticAnimalsList.add(hen);
+                        hen.startProduceProduct = new TIME(level.time.n);
+                        hen.image.setVisible(true);
+                        hen.lifeProgBar.setProgress(1);
+                        hen.lifeProgBar.setPrefSize(50,10);
+                        hen.lifeProgBar.setLayoutX(hen.image.getX());
+                        hen.lifeProgBar.setLayoutY(hen.image.getY()+hen.image.getFitHeight());
+                        pane.getChildren().add(hen.lifeProgBar);
+                        GUI.playSound(new File("src\\sample\\pictures\\hen.wav")).start();
+                        pane.getChildren().addAll(hen.image);
+                    }
+                    else {
+                        Product product = workShop.producing();
+                        product.setStartDisappearTime(level.time);
+                        productsList.add(product);
+                        product.image.setX(random.nextInt(mapWidth)+distanceMapAndPageWidth);
+                        product.image.setY(random.nextInt(mapHeight)+distanceMapAndPageHeight);
+                        product.image.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent event) {
+                                pickupProduct(product.getX(),product.getY(),pane);
+
+                            }
+                        });
+                        product.setStartDisappearTime(level.time);
+                        if (!pane.getChildren().contains(product.image))
+                            pane.getChildren().addAll(product.image);
+                    }
                 }
                 workShop.setStartTime(new TIME(0));
                 return workShop.name;
@@ -908,6 +939,7 @@ public class Manager {
                 }
             }
             if (level.time.n - wildAnimal.startTimeBreakCage == 3  &&  wildAnimal.startTimeBreakCage > 0){
+                removeAnimalList.add(wildAnimal);
                 pane.getChildren().remove(wildAnimal.breakCage);
                 pane.getChildren().remove(wildAnimal.image);
             }
