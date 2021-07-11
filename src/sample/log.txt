@@ -1004,3 +1004,38 @@ Sat Jul 10 19:25:29 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 10 19:26:14 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 10 19:28:32 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 10 19:29:36 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 07:05:50 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 07:06:01 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 07:06:35 IRDT 2021 [ERROR] buy hen
+Sun Jul 11 07:06:37 IRDT 2021 [ERROR] buy hound
+Sun Jul 11 07:06:47 IRDT 2021 [ERROR] buy cat
+Sun Jul 11 07:06:49 IRDT 2021 [ERROR] buy turkey
+Sun Jul 11 07:06:51 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 07:07:07 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 07:07:13 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 07:07:24 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 07:07:43 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 07:07:53 IRDT 2021 [INFO] Workshop start working
+Sun Jul 11 07:09:06 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sun Jul 11 07:09:09 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sun Jul 11 07:09:15 IRDT 2021 [ERROR] The bucket still has water
+Sun Jul 11 10:23:01 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:23:15 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 10:23:16 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 10:23:17 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 10:23:17 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 10:24:25 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:27:39 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:33:42 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:38:35 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:40:56 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:47:43 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:49:45 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:53:19 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 10:53:39 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 10:54:58 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 11:00:47 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 11:02:09 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 11:03:27 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 11:05:47 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 11:06:40 IRDT 2021 [INFO] Signed In successfully

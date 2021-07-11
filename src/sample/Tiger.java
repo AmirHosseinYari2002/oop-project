@@ -24,5 +24,7 @@ public class Tiger extends WildAnimal{
         this.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage1.png")));
         this.cage.setX(100);
         this.cage.setY(100);
+        this.breakCage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\break.gif")));
+        this.startTimeBreakCage = 0;
     }
 }

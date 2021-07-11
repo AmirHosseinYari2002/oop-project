@@ -11,4 +11,6 @@ public abstract class WildAnimal extends Animal{
     protected boolean decreaseCageLevel;
     protected boolean useCageOrder;
     protected ImageView cage;
+    protected ImageView breakCage;
+    protected int startTimeBreakCage;
 }

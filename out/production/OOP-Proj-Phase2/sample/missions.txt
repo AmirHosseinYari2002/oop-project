@@ -1,6 +1,6 @@
 9
 LevelCoins,300,300,400,400,500,500,600,700,700,800
-WildAnimalLevel1,Lion-5
+WildAnimalLevel1,Lion-5,Bear-10,Tiger-15
 WildAnimalLevel2,Lion-3,Bear-13,Lion-23
 WildAnimalLevel3,Lion-2,Bear-12,Tiger-22,Bear-32
 WildAnimalLevel4,Bear-5,Tiger-15,Lion-25,Tiger-35

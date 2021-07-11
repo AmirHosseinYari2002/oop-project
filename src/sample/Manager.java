@@ -1,5 +1,7 @@
 package sample;//import com.google.gson.Gson;
 
+import javafx.animation.Animation;
+import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
@@ -185,7 +187,7 @@ public class Manager {
             }
         }
         for (WildAnimal wildAnimal : wildAnimalsList) {
-            if (wildAnimal.cageLevel == 0) {
+            if (wildAnimal.cageLevel == 0  &&  wildAnimal.startTimeBreakCage == 0) {
                 int a = 1;
                 if (random.nextInt(2) == 0) {
                     if (wildAnimal.X >= mapWidth) {
@@ -566,7 +568,7 @@ public class Manager {
                     pane.getChildren().remove(wildAnimal.cage);
                     wildAnimal.cageLevel++;
                     wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage" + wildAnimal.cageLevel + ".png")));
-                    wildAnimal.cage.setX(wildAnimal.X - 20);
+                    wildAnimal.cage.setX(wildAnimal.X - 30);
                     wildAnimal.cage.setY(wildAnimal.Y - 50);
                     wildAnimal.cage.setVisible(true);
                 }
@@ -890,12 +892,22 @@ public class Manager {
                 if (!wildAnimal.decreaseCageLevel){
                     pane.getChildren().remove(wildAnimal.cage);
                     wildAnimal.cageLevel--;
-                    wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage"+wildAnimal.cageLevel+".png")));
-                    wildAnimal.cage.setX(wildAnimal.X-20);
-                    wildAnimal.cage.setY(wildAnimal.Y-50);
-                    wildAnimal.cage.setVisible(true);
-                    pane.getChildren().addAll(wildAnimal.cage);
+                    if (wildAnimal.cageLevel == 0  &&  wildAnimal.startTimeBreakCage == 0){
+                        wildAnimal.startTimeBreakCage = level.time.n;
+                        wildAnimal.breakCage.setX(wildAnimal.X-45);
+                        wildAnimal.breakCage.setY(wildAnimal.Y-50);
+                        wildAnimal.breakCage.setVisible(true);
+                        pane.getChildren().addAll(wildAnimal.breakCage);
+                    }else if (wildAnimal.cageLevel > 0){
+                        wildAnimal.cage = new ImageView(new Image(new FileInputStream("src\\sample\\pictures\\cage" + wildAnimal.cageLevel + ".png")));
+                        wildAnimal.cage.setVisible(true);
+                        pane.getChildren().addAll(wildAnimal.cage);
+                    }
                 }
+            }
+            if (level.time.n - wildAnimal.startTimeBreakCage == 3  &&  wildAnimal.startTimeBreakCage > 0){
+                pane.getChildren().remove(wildAnimal.breakCage);
+                pane.getChildren().remove(wildAnimal.image);
             }
             wildAnimal.decreaseCageLevel = false;
         }
