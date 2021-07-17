@@ -1,5 +1,5 @@
 File creation time : Wed Jun 02 14:31:31 IRDT 2021
-Time of the last change in the file : Mon Jun 07 18:51:07 IRDT 2021
+Time of the last change in the file : Sat Jul 17 08:31:20 IRDT 2021
 ---------------------------------------------------------------
 Wed Jun 02 17:30:38 IRDT 2021 [INFO] Signed In successfully
 (user : amir )
@@ -1169,3 +1169,57 @@ Sun Jul 11 18:17:49 IRDT 2021 [ERROR] buy hen
 Sun Jul 11 18:17:55 IRDT 2021 [INFO] Workshop start working
 Sun Jul 11 18:18:05 IRDT 2021 [ERROR] Grass planted
 Sun Jul 11 18:18:07 IRDT 2021 [INFO] egg reach the desired amount.
+Sun Jul 11 18:19:28 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 11 18:19:33 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:35 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:19:41 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:42 IRDT 2021 [ERROR] Grass planted
+Sun Jul 11 18:19:55 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 11 18:19:59 IRDT 2021 [ERROR] Grass planted
+Thu Jul 15 10:47:46 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 10:50:55 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 15:45:41 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:02:51 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:04:34 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:07:16 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:13:06 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:19:41 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:26:09 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:27:32 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:36:50 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:37:38 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 16:40:17 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:02:18 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:08:21 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:08:59 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:11:57 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:12:44 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:13:16 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:13:42 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:21:01 IRDT 2021 [INFO] Signed In successfully
+Thu Jul 15 18:27:45 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 07:43:08 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 07:57:35 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:00:51 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:08:25 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:10:29 IRDT 2021 [INFO] Signed up successfully
+Sat Jul 17 08:11:24 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:11:32 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:11:33 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:11:33 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:11:34 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:12:07 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:12:10 IRDT 2021 [ERROR] Grass planted
+Sat Jul 17 08:12:11 IRDT 2021 [ERROR] There is grass in this location
+Sat Jul 17 08:12:16 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:12:23 IRDT 2021 [INFO] egg reach the desired amount.
+Sat Jul 17 08:23:05 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:23:11 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:23:11 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:23:12 IRDT 2021 [ERROR] buy hen
+Sat Jul 17 08:23:17 IRDT 2021 [INFO] egg reach the desired amount.
+Sat Jul 17 08:25:39 IRDT 2021 [ERROR] Sign up failed
+Sat Jul 17 08:25:58 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:28:02 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:31:13 IRDT 2021 [INFO] Signed In successfully
+Sat Jul 17 08:31:20 IRDT 2021 [INFO] Save data in database

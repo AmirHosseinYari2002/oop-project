@@ -17,15 +17,19 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 public class MainMenu {
 
     public static Player player;
-    Authentication authentication = new Authentication();
+    static Authentication authentication = new Authentication();
     ArrayList<Button> levelBtn = new ArrayList<>();
+    static Database database = new Database();
 
     @FXML
     private ImageView farmer;
@@ -129,7 +133,7 @@ public class MainMenu {
         }
     }
     @FXML
-    void showExit(MouseEvent event) {
+    void showExit(MouseEvent event) throws SQLException {
         Alert alert = new Alert(Alert.AlertType.WARNING,"Exit",ButtonType.YES,ButtonType.NO);
         alert.setTitle("Exit");
         alert.setHeaderText("");
@@ -139,6 +143,11 @@ public class MainMenu {
             FileManager.remove(authentication.getUsers(), player.getName());
             String input = player.getName()+","+player.getPassword()+","+player.getLevel()+","+player.getCoins();
             FileManager.addToFile(authentication.getUsers(),input);
+            database.deleteData(player);
+            database.insertData(player);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Save data in database");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Exit game");
+            FileManager.replace(GameHandler.getInstance(), "Time of the last change in the file : ", ("Time of the last change in the file : " + new Date()));
             Stage stage = (Stage) exit.getScene().getWindow();
             stage.close();
             System.exit(0);
@@ -251,6 +260,11 @@ public class MainMenu {
             FileManager.remove(authentication.getUsers(), player.getName());
             String input = player.getName()+","+player.getPassword()+","+player.getLevel()+","+player.getCoins();
             FileManager.addToFile(authentication.getUsers(),input);
+            database.deleteData(player);
+            database.insertData(player);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Save data in database");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Sign out");
+            FileManager.replace(GameHandler.getInstance(), "Time of the last change in the file : ", ("Time of the last change in the file : " + new Date()));
             Stage stage = (Stage) exit.getScene().getWindow();
             stage.close();
             Stage primaryStage = new Stage();

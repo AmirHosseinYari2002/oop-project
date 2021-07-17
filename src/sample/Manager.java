@@ -1,4 +1,4 @@
-package sample;//import com.google.gson.Gson;
+package sample;
 
 import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;

@@ -56,6 +56,7 @@ public class SignUp {
             Stage stage = (Stage) signUpBtn.getScene().getWindow();
             stage.close();
             MainMenu.player = FileManager.initPlayer(userName);
+            MainMenu.database.insertData(MainMenu.player);
             Parent root = FXMLLoader.load(getClass().getResource("mainMenu.fxml"));
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Main Menu");

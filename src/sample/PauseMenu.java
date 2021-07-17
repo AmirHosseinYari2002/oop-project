@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class PauseMenu {
 
@@ -43,6 +44,14 @@ public class PauseMenu {
         Stage stage =(Stage) exitBtn.getScene().getWindow();
         if (alert.getResult() == ButtonType.OK) {
             MainMenu.player.setCoins(StartLevel.level.initialMoney);
+            FileManager.remove(MainMenu.authentication.getUsers(), MainMenu.player.getName());
+            String input = MainMenu.player.getName()+","+MainMenu.player.getPassword()+","+MainMenu.player.getLevel()+","+MainMenu.player.getCoins();
+            FileManager.addToFile(MainMenu.authentication.getUsers(),input);
+            MainMenu.database.deleteData(MainMenu.player);
+            MainMenu.database.insertData(MainMenu.player);
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Save data in database");
+            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Exit game");
+            FileManager.replace(GameHandler.getInstance(), "Time of the last change in the file : ", ("Time of the last change in the file : " + new Date()));
             System.exit(0);
         }
     }
