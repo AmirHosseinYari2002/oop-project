@@ -1,5 +1,5 @@
 File creation time : Wed Jun 02 14:31:31 IRDT 2021
-Time of the last change in the file : Sat Jul 17 08:33:15 IRDT 2021
+Time of the last change in the file : Sun Jul 18 09:34:51 IRDT 2021
 ---------------------------------------------------------------
 Wed Jun 02 17:30:38 IRDT 2021 [INFO] Signed In successfully
 (user : amir )
@@ -1263,3 +1263,26 @@ Sun Jul 18 07:47:50 IRDT 2021 [ERROR] buy cat
 Sun Jul 18 07:47:59 IRDT 2021 [INFO] Workshop start working
 Sun Jul 18 07:48:01 IRDT 2021 [ERROR] buy hound
 Sun Jul 18 07:48:11 IRDT 2021 [INFO] egg reach the desired amount.
+Sun Jul 18 08:02:57 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 08:03:02 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 08:03:06 IRDT 2021 [ERROR] buy cat
+Sun Jul 18 08:03:11 IRDT 2021 [ERROR] buy hound
+Sun Jul 18 08:06:24 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 08:06:28 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 08:06:31 IRDT 2021 [ERROR] buy turkey
+Sun Jul 18 08:06:33 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 18 08:06:36 IRDT 2021 [ERROR] buy hound
+Sun Jul 18 08:06:37 IRDT 2021 [ERROR] buy cat
+Sun Jul 18 09:21:34 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 09:26:30 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 09:27:35 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 09:27:38 IRDT 2021 [INFO] Save data in database
+Sun Jul 18 09:27:39 IRDT 2021 [INFO] Sign out
+Sun Jul 18 09:29:15 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 09:29:18 IRDT 2021 [INFO] Save data in database
+Sun Jul 18 09:29:18 IRDT 2021 [INFO] Sign out
+Sun Jul 18 09:34:44 IRDT 2021 [ERROR] Sign up failed
+Sun Jul 18 09:34:48 IRDT 2021 [INFO] Signed up successfully
+Sun Jul 18 09:34:51 IRDT 2021 [INFO] Save data in database
+Sun Jul 18 09:34:51 IRDT 2021 [INFO] Sign out
+Sun Jul 18 09:34:56 IRDT 2021 [ERROR] Sign in failed

@@ -1,70 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignIn">
+<AnchorPane prefHeight="390.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignIn">
    <children>
-      <Rectangle fx:id="backGround" arcHeight="5.0" arcWidth="5.0" height="400.0" onMouseEntered="#update" stroke="BLACK" strokeType="INSIDE" width="600.0">
-         <fill>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/si.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="127.0" layoutX="344.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../sample/pictures/loadtitle1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="357.0" layoutY="233.0" onMouseClicked="#confirm" prefHeight="30.0" prefWidth="82.0" text="Sign in" textAlignment="CENTER" textFill="#e1ff00">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="333.0" layoutY="46.0" text="Enter your Username">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.7166666388511658" green="1.0" />
+                        <Color red="0.0833333358168602" green="1.0" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.08483430743217468" green="0.7157894968986511" blue="0.3056686222553253" />
+                        <Color red="0.008771929889917374" green="0.2631579041481018" />
                      </color>
                   </Stop>
                </stops>
             </RadialGradient>
-         </fill>
-      </Rectangle>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../sample/pictures/loadtitle1.png" />
-         </image>
-      </ImageView>
-      <Label alignment="CENTER" layoutX="259.0" layoutY="41.0" prefHeight="30.0" prefWidth="82.0" text="Sign in" textAlignment="CENTER" textFill="#e1ff00">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font>
+         </textFill>
       </Label>
-      <Label layoutX="230.0" layoutY="129.0" text="Enter your Username">
+      <Label layoutX="335.0" layoutY="147.0" text="Enter your Password">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.0833333358168602" green="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.008771929889917374" green="0.2631579041481018" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
       </Label>
-      <Label layoutX="232.0" layoutY="230.0" text="Enter your Password">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtUser" layoutX="194.0" layoutY="161.0" prefHeight="38.0" prefWidth="207.0" promptText="Username">
+      <TextField fx:id="txtUser" layoutX="297.0" layoutY="78.0" prefHeight="38.0" prefWidth="207.0" promptText="Username">
          <font>
             <Font name="System Italic" size="14.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="49.0" fitWidth="47.0" layoutX="187.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="49.0" fitWidth="47.0" layoutX="290.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/username.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="53.0" fitWidth="37.0" layoutX="192.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="53.0" fitWidth="37.0" layoutX="295.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../sample/pictures/password.png" />
          </image>
       </ImageView>
-      <Button fx:id="signInBtn" disable="true" layoutX="252.0" layoutY="329.0" mnemonicParsing="false" onAction="#confirm" prefHeight="38.0" prefWidth="90.0" text="Sign in" />
-      <PasswordField fx:id="txtPass" layoutX="192.0" layoutY="268.0" prefHeight="38.0" prefWidth="207.0" promptText="Password">
+      <PasswordField fx:id="txtPass" layoutX="295.0" layoutY="185.0" prefHeight="38.0" prefWidth="207.0" promptText="Password">
          <font>
             <Font name="System Italic" size="14.0" />
          </font>
@@ -73,14 +101,6 @@
          <image>
             <Image url="@pictures/farmer3.gif" />
          </image>
-      </ImageView>
-      <ImageView fitHeight="93.0" fitWidth="117.0" layoutX="31.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5">
-         <image>
-            <Image url="@pictures/grass.png" />
-         </image>
-         <effect>
-            <DropShadow />
-         </effect>
       </ImageView>
    </children>
 </AnchorPane>

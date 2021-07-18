@@ -22,19 +22,13 @@ public class SignUp {
     Authentication authentication = new Authentication();
 
     @FXML
-    private Rectangle backGround;
-
-    @FXML
     private TextField txtUser;
-
-    @FXML
-    private Button signUpBtn;
 
     @FXML
     private PasswordField txtPass;
 
     @FXML
-    void confirm(ActionEvent event) throws IOException {
+    void confirm(MouseEvent event) throws IOException {
         String userName = txtUser.getText();
         String password = txtPass.getText();
         authentication.initUserPass(userName, password);
@@ -53,7 +47,7 @@ public class SignUp {
             alert.showAndWait();
             FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Signed up successfully");
             FileManager.addToFile(authentication.getUsers(),userName+","+password+",1,200");
-            Stage stage = (Stage) signUpBtn.getScene().getWindow();
+            Stage stage = (Stage) txtPass.getScene().getWindow();
             stage.close();
             MainMenu.player = FileManager.initPlayer(userName);
             MainMenu.database.insertData(MainMenu.player);
@@ -64,16 +58,6 @@ public class SignUp {
             GUI.playSound(new File("src\\pictures\\Farmville.wav"));
             primaryStage.show();
         }
-    }
-
-    @FXML
-    public void initialize(){
-        GUI.addBtnGUI(signUpBtn);
-    }
-    @FXML
-    void update(MouseEvent event) {
-        if (isReady())
-            signUpBtn.setDisable(false);
     }
 
     private boolean isReady(){

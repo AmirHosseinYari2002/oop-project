@@ -7,44 +7,56 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartGame">
+<AnchorPane prefHeight="479.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartGame">
    <children>
-      <Rectangle fx:id="backGround" arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
-         <fill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+      <ImageView fitHeight="485.0" fitWidth="557.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/bg.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="signInBtn" layoutX="161.0" layoutY="204.0" mnemonicParsing="false" onAction="#signInProcess" prefHeight="38.0" prefWidth="102.0" text="Sign in">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5088888804117838" centerY="0.5" focusDistance="0.14953274593175014" radius="0.8644859902212554">
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.11999999731779099" green="1.0" blue="0.3285548985004425" />
+                        <Color red="1.0" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.24654971063137054" green="0.6526315808296204" blue="0.4022144377231598" />
+                        <Color green="0.13294784724712372" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
             </RadialGradient>
-         </fill>
-      </Rectangle>
-      <ImageView fx:id="userImage" fitHeight="197.0" fitWidth="214.0" layoutX="208.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../sample/pictures/username.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="signInBtn" layoutX="172.0" layoutY="231.0" mnemonicParsing="false" onAction="#signInProcess" prefHeight="58.0" prefWidth="119.0" text="Sign in">
-         <font>
-            <Font size="17.0" />
-         </font>
+         </textFill>
       </Button>
-      <Button fx:id="signUpBtn" layoutX="319.0" layoutY="231.0" mnemonicParsing="false" onAction="#signupProcess" prefHeight="58.0" prefWidth="119.0" text="Sign Up">
+      <Button fx:id="signUpBtn" layoutX="161.0" layoutY="288.0" mnemonicParsing="false" onAction="#signupProcess" prefHeight="38.0" prefWidth="102.0" text="Sign Up">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
+         <textFill>
+            <RadialGradient centerX="0.5088888804117838" centerY="0.5" focusDistance="0.14953274593175014" radius="0.8644859902212554">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.13294784724712372" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
       </Button>
    </children>
 </AnchorPane>

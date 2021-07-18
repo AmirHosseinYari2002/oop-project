@@ -20,9 +20,9 @@
             <Image url="@pictures/BronzeCup.png" />
          </image>
       </ImageView>
-      <Label layoutX="215.0" layoutY="33.0" text="Level complited" textFill="WHITE">
+      <Label layoutX="193.0" layoutY="25.0" text="Level complited" textFill="#e5ff00">
          <font>
-            <Font name="System Bold Italic" size="23.0" />
+            <Font name="System Bold Italic" size="26.0" />
          </font>
          <effect>
             <DropShadow />

@@ -281,7 +281,7 @@ public class MainMenu {
             Stage primaryStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("StartGame.fxml"));
             primaryStage.setTitle("SUT Farm Frenzy");
-            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setScene(new Scene(root, 552, 479));
             primaryStage.show();
         }
     }

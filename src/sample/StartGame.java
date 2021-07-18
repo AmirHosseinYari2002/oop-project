@@ -38,7 +38,7 @@ public class StartGame {
         Parent root = FXMLLoader.load(getClass().getResource("signIn.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Sign in Panel");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 600, 390));
         primaryStage.show();
     }
 
@@ -49,7 +49,7 @@ public class StartGame {
         Parent root = FXMLLoader.load(getClass().getResource("signUp.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Sign up Panel");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 594, 394));
         primaryStage.show();
     }
 }
