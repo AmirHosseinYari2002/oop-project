@@ -44,14 +44,14 @@ public class SignUp {
             alert.setHeaderText("");
             alert.setContentText("This Username is already existed!");
             alert.showAndWait();
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Sign up failed");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Sign up failed");
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Sign up");
             alert.setHeaderText("");
             alert.setContentText("Signed up successfully.");
             alert.showAndWait();
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Signed up successfully");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Signed up successfully");
             FileManager.addToFile(authentication.getUsers(),userName+","+password+",1,200");
             Stage stage = (Stage) signUpBtn.getScene().getWindow();
             stage.close();

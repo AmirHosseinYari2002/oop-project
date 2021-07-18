@@ -49,9 +49,9 @@ public class PauseMenu {
             FileManager.addToFile(MainMenu.authentication.getUsers(),input);
             MainMenu.database.deleteData(MainMenu.player);
             MainMenu.database.insertData(MainMenu.player);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Save data in database");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Exit game");
-            FileManager.replace(GameHandler.getInstance(), "Time of the last change in the file : ", ("Time of the last change in the file : " + new Date()));
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Save data in database");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Exit game");
+            FileManager.replace(MainMenu.getInstance(), "Time of the last change in the file : ", ("Time of the last change in the file : " + new Date()));
             System.exit(0);
         }
     }
@@ -67,6 +67,7 @@ public class PauseMenu {
         stage.close();
         Stage stage1 = (Stage) pane.getScene().getWindow();
         stage1.close();
+        FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Restart Game");
         MainMenu.player.setCoins(StartLevel.level.initialMoney);
         StartLevel.level = new Levels(StartLevel.level.levelNum);
         StartLevel.manager = new Manager(StartLevel.level,MainMenu.player);
@@ -87,6 +88,7 @@ public class PauseMenu {
         StartLevel.clock.play();
         Stage stage = (Stage) resumeBtn.getScene().getWindow();
         stage.close();
+        FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Resume Game");
     }
 
 

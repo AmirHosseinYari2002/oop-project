@@ -1226,3 +1226,40 @@ Sat Jul 17 08:31:20 IRDT 2021 [INFO] Save data in database
 Sat Jul 17 08:33:09 IRDT 2021 [INFO] Signed In successfully
 Sat Jul 17 08:33:15 IRDT 2021 [INFO] Save data in database
 Sat Jul 17 08:33:15 IRDT 2021 [INFO] Exit game
+Sun Jul 18 07:42:32 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 07:42:50 IRDT 2021 [INFO] Pause Game
+Sun Jul 18 07:42:53 IRDT 2021 [INFO] Resume Game
+Sun Jul 18 07:43:32 IRDT 2021 [ERROR] Truck do not have enough space
+Sun Jul 18 07:43:35 IRDT 2021 [INFO] Loaded successfully
+Sun Jul 18 07:43:42 IRDT 2021 [INFO] The car started transporting products
+Sun Jul 18 07:43:46 IRDT 2021 [INFO] The car started transporting products
+Sun Jul 18 07:44:09 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 07:44:10 IRDT 2021 [ERROR] Grass planted
+Sun Jul 18 07:44:13 IRDT 2021 [ERROR] Grass planted
+Sun Jul 18 07:44:16 IRDT 2021 [ERROR] buy turkey
+Sun Jul 18 07:44:19 IRDT 2021 [ERROR] Grass planted
+Sun Jul 18 07:44:33 IRDT 2021 [ERROR] Grass planted
+Sun Jul 18 07:44:45 IRDT 2021 [INFO] Loaded successfully
+Sun Jul 18 07:44:48 IRDT 2021 [INFO] Loaded successfully
+Sun Jul 18 07:44:50 IRDT 2021 [ERROR] Truck do not have enough space
+Sun Jul 18 07:44:54 IRDT 2021 [INFO] The car started transporting products
+Sun Jul 18 07:45:01 IRDT 2021 [ERROR] buy cat
+Sun Jul 18 07:45:30 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sun Jul 18 07:45:31 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 07:45:41 IRDT 2021 [INFO] Pause Game
+Sun Jul 18 07:45:42 IRDT 2021 [INFO] Restart Game
+Sun Jul 18 07:45:46 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 07:45:47 IRDT 2021 [ERROR] buy cat
+Sun Jul 18 07:45:59 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 07:46:03 IRDT 2021 [ERROR] buy hound
+Sun Jul 18 07:46:21 IRDT 2021 [ERROR] buy hound
+Sun Jul 18 07:46:25 IRDT 2021 [ERROR] buy buffalo
+Sun Jul 18 07:47:14 IRDT 2021 [INFO] Pause Game
+Sun Jul 18 07:47:16 IRDT 2021 [INFO] Restart Game
+Sun Jul 18 07:47:20 IRDT 2021 [ERROR] don't have enough coins to buy hen
+Sun Jul 18 07:47:42 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 07:47:49 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 07:47:50 IRDT 2021 [ERROR] buy cat
+Sun Jul 18 07:47:59 IRDT 2021 [INFO] Workshop start working
+Sun Jul 18 07:48:01 IRDT 2021 [ERROR] buy hound
+Sun Jul 18 07:48:11 IRDT 2021 [INFO] egg reach the desired amount.

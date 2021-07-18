@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Map;
 
@@ -44,11 +45,15 @@ public class ShowTruck {
         String result = StartLevel.manager.loadingProducts(productComboBox.getValue(), Integer.parseInt(numTextField.getText()));
         if (result.equals("loaded")){
             showInTtruck.getItems().add(productComboBox.getValue()+"\tnumber: "+numTextField.getText());
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Loaded successfully");
         }
-        else if (result.equals("notEnoughSpace"))
-            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry you don't have enough space...");
+        else if (result.equals("notEnoughSpace")) {
+            GUI.createAlert(Alert.AlertType.ERROR, "ERROR", "Sorry you don't have enough space...");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Truck do not have enough space");
+        }
         else if (result.equals("Traveling")){
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","The truck is traveling, please wait...");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The truck is traveling");
         }
     }
 
@@ -64,18 +69,23 @@ public class ShowTruck {
         if (result.equals("unLoaded")){
             ObservableList<String> texts = showInTtruck.getItems();
             for (String text : texts) {
-                if (text.contains(productComboBox.getValue()))
+                if (text.contains(productComboBox.getValue())) {
                     showInTtruck.getItems().remove(text);
+                    FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Unloaded successfully");
+                }
             }
         }
-        else if (result.equals("notEnoughSpace"))
-            GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! you don't have enough space in your barn");
+        else if (result.equals("notEnoughSpace")) {
+            GUI.createAlert(Alert.AlertType.ERROR, "ERROR", "Sorry! you don't have enough space in your barn");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Barn don't have enough space");
+        }
     }
 
     @FXML
     void startTravel(ActionEvent event) {
         StartLevel.manager.startTrip();
         GUI.createAlert(Alert.AlertType.INFORMATION,"Travel","The car started transporting products to the city.");
+        FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The car started transporting products");
     }
 
     @FXML

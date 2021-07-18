@@ -44,14 +44,14 @@ public class SignIn {
             alert.setHeaderText("");
             alert.setContentText("Username or password is incorrect!");
             alert.showAndWait();
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Sign in failed");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Sign in failed");
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Sign in");
             alert.setHeaderText("");
             alert.setContentText("Sign in successfully.");
             alert.showAndWait();
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Signed In successfully");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Signed In successfully");
             MainMenu.player = FileManager.initPlayer(userName);
             Stage stage = (Stage) signInBtn.getScene().getWindow();
             stage.close();

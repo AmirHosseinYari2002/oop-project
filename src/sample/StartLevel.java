@@ -174,15 +174,15 @@ public class StartLevel {
         if (imageView != null){
             if (imageView.getFitHeight() == 50  &&  imageView.getFitWidth() == 80){
                 GUI.createAlert(Alert.AlertType.ERROR,"ERROR","There is grass in this location");
-                FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"There is grass in this location");
+                FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"There is grass in this location");
             }else {
                 imageView.setVisible(true);
                 ground.getChildren().addAll(imageView);
-                FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Grass planted");
+                FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Grass planted");
             }
         }else {
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Bucket is empty!");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Bucket is empty!");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"Bucket is empty!");
         }
     }
 
@@ -191,11 +191,11 @@ public class StartLevel {
         String manageError = manager.fillWaterBucket();
         if (manageError.equals("haveWater")) {
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","The bucket still has water. So you can not take water from the well");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The bucket still has water");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"The bucket still has water");
         }
         else if (manageError.equals("filled")) {
             GUI.createAlert(Alert.AlertType.INFORMATION,"Well","The bucket of water was filled");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The bucket of water was filled");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"The bucket of water was filled");
         }
     }
 
@@ -362,13 +362,13 @@ public class StartLevel {
                     String result = manager.startingWorkshop(WSBtnNames[workshopBtn.indexOf(imageView)]);
                     if (result.equals("b")){
                         GUI.createAlert(Alert.AlertType.ERROR,"ERROR","You do not have the raw materials to produce the product !");
-                        FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"do not have the raw materials to produce the product");
+                        FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"do not have the raw materials to produce the product");
                     }
                     else if (result.equals("c"))
                         GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Workshop is busy!...");
                     else {
                         GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
-                        FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
+                        FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
                     }
                 }
             });
@@ -408,7 +408,7 @@ public class StartLevel {
         if (task.equals("coins")){
             GUI.playSound(new File("src\\sample\\pictures\\finishChime.wav")).start();
             GUI.createAlert(Alert.AlertType.INFORMATION,"Tasks","Good! You complete a task. Your coins reach the desired amount.");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"coins reach the desired amount");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"coins reach the desired amount");
             String tasks = "";
             for (Map.Entry<String, Integer> entry : level.tasks.entrySet()) {
                 tasks += entry.getKey() + ":" + entry.getValue().toString()+"\n";
@@ -416,7 +416,7 @@ public class StartLevel {
             tasksLbl.setText(tasks);
         }else if (!task.equals("null")){
             GUI.playSound(new File("src\\sample\\pictures\\finishChime.wav")).start();
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+task+" reach the desired amount.");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+task+" reach the desired amount.");
             String tasks = "";
             for (Map.Entry<String, Integer> entry : level.tasks.entrySet()) {
                 tasks += entry.getKey() + ":" + entry.getValue().toString()+"\n";
@@ -424,6 +424,7 @@ public class StartLevel {
             tasksLbl.setText(tasks);
         }
         if (manager.isLevelCompleted()){
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Level Finished");
             workshopBuildBtn.clear();
             workshopBtn.clear();
             workshopUpgradeBtn.clear();
@@ -471,11 +472,11 @@ public class StartLevel {
             ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\buffalo.wav")).start();
             ground.getChildren().addAll(manageError.image);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy buffalo");
 
         }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy buffalo");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy buffalo");
         }
     }
 
@@ -486,11 +487,11 @@ public class StartLevel {
             manageError.image.setVisible(true);
             GUI.playSound(new File("src\\sample\\pictures\\Cat.wav")).start();
             ground.getChildren().addAll(manageError.image);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy cat");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy cat");
 
         }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy cat");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy cat");
         }
     }
 
@@ -506,11 +507,11 @@ public class StartLevel {
             ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\hen.wav")).start();
             ground.getChildren().addAll(manageError.image);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hen");
 
         }else {
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hen");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hen");
         }
     }
 
@@ -521,11 +522,11 @@ public class StartLevel {
             manageError.image.setVisible(true);
             GUI.playSound(new File("src\\sample\\pictures\\Dog.wav")).start();
             ground.getChildren().addAll(manageError.image);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hound");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy hound");
 
         }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hound");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy hound");
         }
     }
 
@@ -541,11 +542,11 @@ public class StartLevel {
             ground.getChildren().add(manageError.lifeProgBar);
             GUI.playSound(new File("src\\sample\\pictures\\Turkey.wav")).start();
             ground.getChildren().addAll(manageError.image);
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"buy turkey");
 
         }else{
             GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Sorry! You don't have enough coins");
-            FileManager.addToFile(GameHandler.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy turkey");
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.ERROR+"] "+"don't have enough coins to buy turkey");
         }
     }
 
@@ -554,6 +555,7 @@ public class StartLevel {
         try {
             PauseMenu.pane = ground;
             clock.pause();
+            FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Pause Game");
             Parent root = FXMLLoader.load(getClass().getResource("pauseMenu.fxml"));
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Pause");
