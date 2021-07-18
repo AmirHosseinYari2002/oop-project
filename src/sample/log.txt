@@ -1286,3 +1286,19 @@ Sun Jul 18 09:34:48 IRDT 2021 [INFO] Signed up successfully
 Sun Jul 18 09:34:51 IRDT 2021 [INFO] Save data in database
 Sun Jul 18 09:34:51 IRDT 2021 [INFO] Sign out
 Sun Jul 18 09:34:56 IRDT 2021 [ERROR] Sign in failed
+Sun Jul 18 16:14:56 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:15:48 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:17:24 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:17:33 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 16:17:38 IRDT 2021 [ERROR] do not have the raw materials to produce the product
+Sun Jul 18 16:18:47 IRDT 2021 [INFO] Workshop start working
+Sun Jul 18 16:20:17 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:20:23 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 16:20:32 IRDT 2021 [INFO] Workshop start working
+Sun Jul 18 16:21:37 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:21:44 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 16:22:01 IRDT 2021 [INFO] Workshop start working
+Sun Jul 18 16:22:50 IRDT 2021 [INFO] Signed In successfully
+Sun Jul 18 16:22:56 IRDT 2021 [ERROR] buy hen
+Sun Jul 18 16:23:01 IRDT 2021 [INFO] Workshop start working
+Sun Jul 18 16:23:12 IRDT 2021 [INFO] Workshop start working

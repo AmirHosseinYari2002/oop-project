@@ -505,8 +505,7 @@ public class Manager {
         }
         return null;
     }
-    public String
-    startingWorkshop(String name){
+    public String startingWorkshop(String name){
         for (WorkShop workShop : workShops) {
             if (workShop.name.equals(name)){
                 if (workShop.isWorking){
@@ -528,7 +527,7 @@ public class Manager {
                     productsInBarn.remove(product[0]);
                     Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[0].getBarnSpace());
                     workShop.setStartTime(level.time);
-                    return workShop.name.concat(String.valueOf(workShop.productionTime));
+                    return workShop.name.concat(String.valueOf(workShop.productionTime.n));
                 }
                 if (product[1] != null){
                     productsInBarn.remove(product[0]);
@@ -536,7 +535,7 @@ public class Manager {
                     Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[0].getBarnSpace());
                     Barn.getInstance().setFreeSpace(Barn.getInstance().getFreeSpace()+product[1].getBarnSpace());
                     workShop.setStartTime(level.time);
-                    return workShop.name.concat(String.valueOf(workShop.productionTime));
+                    return workShop.name.concat(String.valueOf(workShop.productionTime.n));
                 }
                 return "b";
             }

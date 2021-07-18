@@ -367,7 +367,8 @@ public class StartLevel {
                     else if (result.equals("c"))
                         GUI.createAlert(Alert.AlertType.ERROR,"ERROR","Workshop is busy!...");
                     else {
-                        GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 2) + " start working, your product will be ready by" + result.substring(result.length() - 2) + " TIME.");
+                        System.out.println(result);
+                        GUI.createAlert(Alert.AlertType.INFORMATION,"Workshop Start",result.substring(0, result.length() - 1) + " start working, your product will be ready by " + result.substring(result.length() - 1) + " TIME.");
                         FileManager.addToFile(MainMenu.getInstance(),new Date().toString()+" ["+Log.INFO+"] "+"Workshop start working");
                     }
                 }
