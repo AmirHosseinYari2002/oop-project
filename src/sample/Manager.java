@@ -17,10 +17,11 @@ import java.util.*;
 public class Manager {
     Levels level;
     Player player;
-    final static int mapWidth = 450;
-    final static int mapHeight = 200;
-    final static int distanceMapAndPageWidth = 250;
-    final static int distanceMapAndPageHeight = 150;
+    final static int mapWidth = 700;
+    final static int mapHeight = 350;
+    final static int distanceMapAndPageWidth = 60;
+    final static int distanceMapAndPageHeight = 30;
+    int a=1,b=1,c=1,d=1,e=1,f=1,g=1,h=1;
 
     static Random random = new Random();
     private ArrayList<DomesticAnimal> domesticAnimalsList = new ArrayList<>();
@@ -118,19 +119,18 @@ public class Manager {
                     }
                 }
             }else {
-                int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (domesticAnimal.X >= mapWidth){
+                    if (domesticAnimal.X >= mapWidth+distanceMapAndPageWidth  ||  domesticAnimal.X <= distanceMapAndPageWidth){
                         a = -a;
                     }
                     domesticAnimal.X += a;
                     domesticAnimal.image.setX(domesticAnimal.X);
                     domesticAnimal.lifeProgBar.setLayoutX(domesticAnimal.X);
                 }else {
-                    if (domesticAnimal.Y >= mapHeight){
-                        a = -a;
+                    if (domesticAnimal.Y >= mapHeight+distanceMapAndPageHeight  ||  domesticAnimal.Y <= distanceMapAndPageHeight){
+                        b = -b;
                     }
-                    domesticAnimal.Y += a;
+                    domesticAnimal.Y += b;
                     domesticAnimal.image.setY(domesticAnimal.Y);
                     domesticAnimal.lifeProgBar.setLayoutY(domesticAnimal.Y);
                 }
@@ -154,52 +154,49 @@ public class Manager {
                     }
                 }
             }else {
-                int a = 1;
                 if (random.nextInt(2) == 0){
-                    if (cat.X >= mapWidth){
-                        a = -a;
+                    if (cat.X >= mapWidth+distanceMapAndPageWidth  ||  cat.X <= distanceMapAndPageWidth){
+                        c = -c;
                     }
-                    cat.X += a;
+                    cat.X += c;
                     cat.image.setX(cat.X);
                 }else {
-                    if (cat.Y >= mapHeight){
-                        a = -a;
+                    if (cat.Y >= mapHeight+distanceMapAndPageHeight  ||  cat.Y <= distanceMapAndPageHeight){
+                        d = -d;
                     }
-                    cat.Y += a;
+                    cat.Y += d;
                     cat.image.setY(cat.Y);
                 }
             }
         }
         for (Hound hound : houndsList) {
-            int a = 1;
             if (random.nextInt(2) == 0){
-                if (hound.X >= mapWidth){
-                    a = -a;
+                if (hound.X >= mapWidth+distanceMapAndPageWidth  ||  hound.X <= distanceMapAndPageWidth){
+                    e = -e;
                 }
-                hound.X += a;
+                hound.X += e;
                 hound.image.setX(hound.X);
             }else {
-                if (hound.Y >= mapHeight){
-                    a = -a;
+                if (hound.Y >= mapHeight+distanceMapAndPageHeight  ||  hound.Y <= distanceMapAndPageHeight){
+                    f = -f;
                 }
-                hound.Y += a;
+                hound.Y += f;
                 hound.image.setY(hound.Y);
             }
         }
         for (WildAnimal wildAnimal : wildAnimalsList) {
             if (wildAnimal.cageLevel == 0  &&  wildAnimal.startTimeBreakCage == 0) {
-                int a = 1;
                 if (random.nextInt(2) == 0) {
-                    if (wildAnimal.X >= mapWidth) {
-                        a = -a;
+                    if (wildAnimal.X >= mapWidth+distanceMapAndPageWidth  ||  wildAnimal.X <= distanceMapAndPageWidth) {
+                        g = -g;
                     }
-                    wildAnimal.X += a;
+                    wildAnimal.X += g;
                     wildAnimal.image.setX(wildAnimal.X);
                 } else {
-                    if (wildAnimal.Y >= mapHeight) {
-                        a = -a;
+                    if (wildAnimal.Y >= mapHeight+distanceMapAndPageHeight  ||  wildAnimal.Y <= distanceMapAndPageHeight) {
+                        h = -h;
                     }
-                    wildAnimal.Y += a;
+                    wildAnimal.Y += h;
                     wildAnimal.image.setY(wildAnimal.Y);
                 }
             }
@@ -497,6 +494,7 @@ public class Manager {
                 }
             }
             Grass grass = new Grass(x, y);
+            System.out.println(grass.getX()+" "+grass.getY());
             grassesList.add(grass);
             Well.getInstance().setRemainingWater(Well.getInstance().getRemainingWater()-1);
             grass.getImg().setX(x);

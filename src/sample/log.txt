@@ -1,5 +1,5 @@
 File creation time : Wed Jun 02 14:31:31 IRDT 2021
-Time of the last change in the file : Sun Jul 18 09:34:51 IRDT 2021
+Time of the last change in the file : Mon Jul 19 07:57:35 IRDT 2021
 ---------------------------------------------------------------
 Wed Jun 02 17:30:38 IRDT 2021 [INFO] Signed In successfully
 (user : amir )
@@ -1302,3 +1302,100 @@ Sun Jul 18 16:22:50 IRDT 2021 [INFO] Signed In successfully
 Sun Jul 18 16:22:56 IRDT 2021 [ERROR] buy hen
 Sun Jul 18 16:23:01 IRDT 2021 [INFO] Workshop start working
 Sun Jul 18 16:23:12 IRDT 2021 [INFO] Workshop start working
+Mon Jul 19 07:23:21 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:23:30 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:23:34 IRDT 2021 [ERROR] buy cat
+Mon Jul 19 07:23:37 IRDT 2021 [ERROR] buy hound
+Mon Jul 19 07:23:39 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:23:41 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:27:14 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:27:19 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:27:24 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:27:29 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:27:33 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:27:34 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:27:43 IRDT 2021 [ERROR] buy cat
+Mon Jul 19 07:27:51 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:36:16 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:36:22 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:36:26 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:36:34 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:36:36 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:03 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:23 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:33 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:44 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:37:46 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:37:47 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:52 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:37:55 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:02 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:12 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:23 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:38:26 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:38:27 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:38:29 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:31 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:38:35 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:38:37 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:38 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:38:39 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:41:16 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:45:35 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:45:40 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:45:43 IRDT 2021 [ERROR] buy cat
+Mon Jul 19 07:45:45 IRDT 2021 [ERROR] buy hound
+Mon Jul 19 07:45:50 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:45:59 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:46:51 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:47:01 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:31 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:50:41 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:45 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:47 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:50 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:51 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:50:54 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:50:58 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:50:59 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:51:01 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:51:11 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:52:00 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:52:40 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:52:43 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:52:45 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:52:47 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:11 IRDT 2021 [INFO] Signed In successfully
+Mon Jul 19 07:55:18 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:55:26 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:30 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:34 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:45 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:48 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:55:57 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:55:59 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:56:00 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:03 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:09 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:56:10 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:12 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:12 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:15 IRDT 2021 [ERROR] Bucket is empty!
+Mon Jul 19 07:56:17 IRDT 2021 [INFO] The bucket of water was filled
+Mon Jul 19 07:56:20 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:56:22 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:56:29 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:56:38 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:56:39 IRDT 2021 [ERROR] buy hound
+Mon Jul 19 07:56:40 IRDT 2021 [ERROR] buy cat
+Mon Jul 19 07:57:04 IRDT 2021 [ERROR] buy cat
+Mon Jul 19 07:57:06 IRDT 2021 [ERROR] buy turkey
+Mon Jul 19 07:57:08 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:57:15 IRDT 2021 [ERROR] buy hen
+Mon Jul 19 07:57:16 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:57:22 IRDT 2021 [ERROR] buy buffalo
+Mon Jul 19 07:57:24 IRDT 2021 [ERROR] Grass planted
+Mon Jul 19 07:57:27 IRDT 2021 [INFO] egg reach the desired amount.
+Mon Jul 19 07:57:27 IRDT 2021 [INFO] Level Finished
+Mon Jul 19 07:57:35 IRDT 2021 [INFO] Save data in database
+Mon Jul 19 07:57:35 IRDT 2021 [INFO] Exit game
