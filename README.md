@@ -1,5 +1,6 @@
-**********SUT OOP PROJECT**********
 
-************FARM FRENZY************
+Sharif University of Technology
 
-Mohammad Hossein Shafizadegan AND Amir Hossein Yari
+Electrical Engineering Department
+
+Amir Hossein Yari And Mohammad Hossein Shafizadegan
